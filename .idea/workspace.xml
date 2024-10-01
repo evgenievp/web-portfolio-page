@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5013e08-3200-4fcd-a19b-e41d12500b82" name="Changes" comment="Web portfolio page init steps" />
+    <list default="true" id="e5013e08-3200-4fcd-a19b-e41d12500b82" name="Changes" comment="requirements file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_page/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_page/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,15 +27,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/evgen/OneDrive/Desktop/web_page",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/evgen/OneDrive/Desktop/web_page&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="web_page" type="Python.DjangoServer" factoryName="Django server">
       <module name="web_page" />
@@ -64,7 +69,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727781926486</updated>
-      <workItem from="1727781927735" duration="874000" />
+      <workItem from="1727781927735" duration="2258000" />
+      <workItem from="1727786490264" duration="2367000" />
     </task>
     <task id="LOCAL-00001" summary="Web portfolio page init steps">
       <created>1727782150954</created>
@@ -73,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1727782150954</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="requirements file">
+      <created>1727784357435</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727784357435</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,6 +108,7 @@
       <path value="$PROJECT_DIR$/venv" />
     </ignored-roots>
     <MESSAGE value="Web portfolio page init steps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Web portfolio page init steps" />
+    <MESSAGE value="requirements file" />
+    <option name="LAST_COMMIT_MESSAGE" value="requirements file" />
   </component>
 </project>

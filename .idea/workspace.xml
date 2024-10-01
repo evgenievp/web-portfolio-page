@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5013e08-3200-4fcd-a19b-e41d12500b82" name="Changes" comment="" />
+    <list default="true" id="e5013e08-3200-4fcd-a19b-e41d12500b82" name="Changes" comment="Web portfolio page init steps" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,7 +11,10 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/venv" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2mpmWwbd4M6VqKxCCsSJDBSqtdu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -24,7 +27,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/evgen/OneDrive/Desktop/web_page/venv",
+    "last_opened_file_path": "C:/Users/evgen/OneDrive/Desktop/web_page",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
@@ -61,8 +64,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727781926486</updated>
-      <workItem from="1727781927735" duration="167000" />
+      <workItem from="1727781927735" duration="874000" />
     </task>
+    <task id="LOCAL-00001" summary="Web portfolio page init steps">
+      <created>1727782150954</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727782150954</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,5 +94,7 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/venv" />
     </ignored-roots>
+    <MESSAGE value="Web portfolio page init steps" />
+    <option name="LAST_COMMIT_MESSAGE" value="Web portfolio page init steps" />
   </component>
 </project>

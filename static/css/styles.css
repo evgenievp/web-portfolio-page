@@ -1,0 +1,43 @@
+body {
+    overflow-x: hidden;
+}
+
+.main-container {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 60vh;
+    width: 100vw;    
+    display: flex;
+    justify-content: center;
+    
+    
+    .card {
+
+        margin: 20px;
+        height: 55%;
+        width: 33%;
+        img {
+            height: 55%;
+        }
+        border: 2px solid #83d2df;
+        font-size: 13pt;
+    }
+}
+
+footer {
+    background-color: black;
+    padding-left: 50px;
+
+}
+
+
+.col mb-3 {
+    margin-left: 200px;
+}
+
+
+
+

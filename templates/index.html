@@ -1,0 +1,45 @@
+{% include 'head.html' %}
+
+<body data-bs-theme="dark">
+
+    {% include 'nav.html' %}
+
+    <div class="main-container">
+      <a href=" {% url 'django page' %}">
+        <div class="card" style="width: 18rem;">
+            <img src="../static/images/django.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Here I show my django knowledge.</p>
+            </div>
+          </div>
+          </a>
+          <a href="{% url 'data structures' %}">
+          <div class="card" style="width: 18rem;">
+            <img src="../static/images/dsa.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Data Structures and Algorithms implementations repo.</p>
+            </div>
+          </div>
+          </a>
+          <a href="{% url 'flask page' %}">
+          <div class="card" style="width: 18rem;">
+            <img src="../static/images/flask.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">My Flask repos.</p>
+            </div>
+          </div>
+          </a>
+          <a href="{% url 'other projects' %}">
+          <div class="card" style="width: 18rem;">
+            <img src="../static/images/other.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Other projects by Petar Evtimov.</p>
+            </div>
+          </div>
+          </a>
+    </div>
+
+    {% include 'footer.html' %}
+
+
+</body>

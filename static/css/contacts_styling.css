@@ -1,0 +1,33 @@
+body {
+    overflow-x: hidden;
+}
+.main-container {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+    
+    .card {
+        margin-top: 200px;
+        height: 15%;
+        width: 33%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        vertical-align: center;
+    }
+
+img {
+    height: 55%;
+}
+
+
+
+

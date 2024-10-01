@@ -1,0 +1,53 @@
+body {
+    overflow-x: hidden;
+    
+}
+
+.main-container {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 60vh;
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    
+    .card {
+        box-sizing:  border-box;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin: 20px;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        height: 80%;
+        width: 160vh;
+        padding: 30px;       
+
+        #contact-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 35px;
+            width: 140px;
+            
+        }
+       
+        
+    }
+}
+
+footer {
+    background-color: black;
+    padding-left: 50px;
+
+}
+
+
+.col mb-3 {
+    margin-left: 200px;
+}
+
+

@@ -29,3 +29,4 @@ class ContactsPageView(views.TemplateView):
 class AboutPageView(views.TemplateView):
     template_name = 'about.html'
 
+

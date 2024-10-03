@@ -1,7 +1,8 @@
 from django.urls import path
-
-
 from web_page.main_page import views
+
+handler404 = 'django.views.defaults page_not_found'
+
 
 urlpatterns = (
     path('', views.MainPage.as_view(), name='index page'),

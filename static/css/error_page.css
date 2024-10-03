@@ -1,0 +1,12 @@
+div .main {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    background-image: url("../static/images/error.PNG");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+h1 {
+    background-color: #006b1b;
+}

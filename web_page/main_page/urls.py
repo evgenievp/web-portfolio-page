@@ -6,7 +6,7 @@ handler404 = 'django.views.defaults page_not_found'
 
 urlpatterns = (
     path('', views.MainPage.as_view(), name='index page'),
-    path('django-projects/', views.DjangoView.as_view(), name='django page'),
+    path('django-projects/', views.django_page_view, name='django page'),
     path('data-structures-and-algos/', views.data_structures_view, name='data structures'),
     path('flask-projects/', views.flask_repos_view, name='flask page'),
     path('other-projects/', views.other_projects_view, name='other projects'),

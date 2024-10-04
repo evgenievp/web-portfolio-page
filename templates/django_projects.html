@@ -2,16 +2,19 @@
 <body data-bs-theme="dark">
     {% include 'nav.html' %}
 
-    
     <div class="main-container">
         <div class="card">
             <div class="card-body">
                 <h3>Projects I'm happy to share</h3>
-
-                <ul>
-                  
-                </ul>
-                <a href="{% url 'index page' %}"><button type="button" class="btn btn-light" id="contact-button">Return to main page</button></a>
+                {% if content %}
+                    {% for item in form %}
+                    <ul>
+                      <h2>{{ item }}</h2> <button type="submit">Rate: {{ item.rate }}</button>
+                    </ul>
+                    {% endfor %}
+                {% else %}
+                        <a href="{% url 'index page' %}"><button type="button" class="btn btn-light" id="contact-button">Return to main page</button></a>
+                {% endif %}
             </div>
         </div>
     </div>

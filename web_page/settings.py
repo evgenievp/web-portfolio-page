@@ -14,7 +14,9 @@ SECRET_KEY = 'django-insecure-zns)+s@#o(78)!gum1u89c4r26ss(oudc70p5@_*^$d_$b6(db
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(' ')
+
+SECRET_KEY = os.environ.get('SECRET_KEY', False)
 
 
 # Application definition
@@ -67,7 +69,11 @@ WSGI_APPLICATION = 'web_page.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'HOST': os.getenv('DB_HOST', None),
+        'PORT': os.getenv('DB_PORT', 5432),
+        'NAME': os.getenv('DB_NAME', None),
+        'USER': os.getenv('DB_USER', None),
+        'PASSWORD': os.getenv('DB_PASSWORD', None),
     }
 }
 

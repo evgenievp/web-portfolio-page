@@ -1,13 +1,19 @@
 from django.views import generic as views
 from django.shortcuts import render
+from web_page.main_page.forms import Project
 
 
 class MainPage(views.TemplateView):
     template_name = 'index.html'
 
 
-class DjangoView(views.TemplateView):
-    template_name = 'django_projects.html'
+def django_page_view(request):
+    form = Project
+    context = {
+        'forms': form,
+    }
+
+    return render(request, 'django_projects.html', context=context)
 
 
 def data_structures_view(request):

@@ -12,11 +12,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-zns)+s@#o(78)!gum1u89c4r26ss(oudc70p5@_*^$d_$b6(db'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(' ')
-
-SECRET_KEY = os.environ.get('SECRET_KEY', False)
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -67,17 +65,15 @@ WSGI_APPLICATION = 'web_page.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'HOST': os.getenv('DB_HOST', None),
-        'PORT': os.getenv('DB_PORT', 5432),
-        'NAME': os.getenv('DB_NAME', None),
-        'USER': os.getenv('DB_USER', None),
-        'PASSWORD': os.getenv('DB_PASSWORD', None),
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "postgres1",
+        "USER": "petar_web_page",
+        "PASSWORD": "qwe123",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 

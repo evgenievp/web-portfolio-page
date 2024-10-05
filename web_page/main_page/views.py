@@ -1,6 +1,7 @@
 from django.views import generic as views
 from django.shortcuts import render
 from web_page.main_page.forms import Project
+from web_page.main_page.models import ApplicationModel
 
 
 class MainPage(views.TemplateView):
@@ -8,9 +9,9 @@ class MainPage(views.TemplateView):
 
 
 def django_page_view(request):
-    form = Project
+    apps = ApplicationModel.objects.filter(type_of_application__exact='Django Apps').all()
     context = {
-        'forms': form,
+        'django_apps': apps
     }
 
     return render(request, 'django_projects.html', context=context)

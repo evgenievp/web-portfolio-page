@@ -1,10 +1,14 @@
 from django.forms import ModelForm
-from web_page.main_page.models import DjangoApp
+from web_page.main_page.models import ApplicationModel
+from django import forms
 
 
-class Project(ModelForm):
+class Project(forms.ModelForm):
     class Meta:
-        model = DjangoApp
+        model = ApplicationModel
         fields = "__all__"
+
+
+
 
 

@@ -6,8 +6,8 @@
         <div class="card">
             <div class="card-body">
                 <h3>Projects I'm happy to share</h3>
-                {% if content %}
-                    {% for item in form %}
+                {% if django_apps %}
+                    {% for item in django_apps %}
                     <ul>
                       <h2>{{ item }}</h2> <button type="submit">Rate: {{ item.rate }}</button>
                     </ul>

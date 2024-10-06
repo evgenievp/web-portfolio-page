@@ -1,3 +1,4 @@
+@import "../static/css/reset.css";
 body {
     overflow-x: hidden;
 }
@@ -19,11 +20,14 @@ body {
         margin: 20px;
         height: 55%;
         width: 33%;
+        border: 2px solid #83d2df;
+        font-size: 16px;
         img {
             height: 55%;
         }
-        border: 2px solid #83d2df;
-        font-size: 13pt;
+        button {
+            border-radius: 5px;
+        }
     }
 }
 

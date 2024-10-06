@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5013e08-3200-4fcd-a19b-e41d12500b82" name="Changes" comment="Some work with forms, models and templates.">
+    <list default="true" id="e5013e08-3200-4fcd-a19b-e41d12500b82" name="Changes" comment="Bug Fixes with datebase. Phew..">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_page/main_page/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_page/main_page/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/projects_styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/projects_styling.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/django_projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/django_projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_page/main_page/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_page/main_page/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_page/main_page/migrations/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web_page/main_page/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_page/main_page/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_page/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_page/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_page/main_page/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_page/main_page/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_page/main_page/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_page/main_page/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
-        <option value="CSS File" />
         <option value="Python Script" />
+        <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -45,7 +49,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Programs/Programming/PORTFOLIO/web_page/envs/.env",
+    "last_opened_file_path": "D:/Programs/Programming/PORTFOLIO/web_page/static/images",
     "list.type.of.created.stylesheet": "CSS",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   },
@@ -59,6 +63,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Programs\Programming\PORTFOLIO\web_page\static\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programs\Programming\PORTFOLIO\web_page\static\gears" />
     </key>
   </component>
   <component name="RunManager">
@@ -117,7 +124,8 @@
       <workItem from="1728040306098" duration="7799000" />
       <workItem from="1728106053420" duration="3095000" />
       <workItem from="1728110061109" duration="501000" />
-      <workItem from="1728110577301" duration="8732000" />
+      <workItem from="1728110577301" duration="15153000" />
+      <workItem from="1728196087990" duration="18917000" />
     </task>
     <task id="LOCAL-00001" summary="Web portfolio page init steps">
       <created>1727782150954</created>
@@ -161,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1728066245155</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Bug Fixes with datebase. Phew..">
+      <created>1728119943968</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728119943968</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +202,23 @@
     <MESSAGE value="add gunicorn to requirements.txt" />
     <MESSAGE value="Add error page." />
     <MESSAGE value="Some work with forms, models and templates." />
-    <option name="LAST_COMMIT_MESSAGE" value="Some work with forms, models and templates." />
+    <MESSAGE value="Bug Fixes with datebase. Phew.." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug Fixes with datebase. Phew.." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/templates/display_project_page.html</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/web_page/main_page/views.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

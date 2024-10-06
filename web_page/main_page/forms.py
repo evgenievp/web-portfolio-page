@@ -10,5 +10,3 @@ class Project(forms.ModelForm):
 
 
 
-
-

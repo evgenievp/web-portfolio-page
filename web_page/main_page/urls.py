@@ -12,5 +12,5 @@ urlpatterns = (
     path('other-projects/', views.other_projects_view, name='other projects'),
     path('contacts/', views.ContactsPageView.as_view(), name='contacts page'),
     path('about/', views.AboutPageView.as_view(), name='about page'),
-
+    path('display-project/<int:pk>/', views.display_project, name='display project'),
 )

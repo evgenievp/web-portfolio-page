@@ -1,5 +1,5 @@
 from django.views import generic as views
-from django.shortcuts import render, get_list_or_404, redirect
+from django.shortcuts import render, redirect
 from django.db.models import F
 
 import web_page

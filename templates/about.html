@@ -4,7 +4,7 @@
 <body data-bs-theme="dark">
 {% include 'nav.html' %}
 <div class="main-container">
-    <div class="card">
+    <div id="div" class="card">
         <h2>What I do:</h2>
         <p>{{ model.info }}</p>
         <a href="{% url 'contacts page' %}">
@@ -12,6 +12,8 @@
         </a>
     </div>
 </div>
+;
+
 
 {% include 'footer.html' %}
 

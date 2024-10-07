@@ -9,7 +9,7 @@
                 <form action="{% url 'index page' %}" method="POST">
                     {% csrf_token %}
                     {% if apps %}
-                        <h3>Projects I'm happy to share:</h3>
+                        <h3>Django Web Apps:</h3>
                         {% for item in apps %}
                             <ul style="list-style-type: none">
                                 <li>

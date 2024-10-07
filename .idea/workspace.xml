@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5013e08-3200-4fcd-a19b-e41d12500b82" name="Changes" comment="New model and template path fixes">
-      <change afterPath="$PROJECT_DIR$/static/css/data_structures_styling.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/other_projects.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/web_pages.css" afterDir="false" />
+    <list default="true" id="e5013e08-3200-4fcd-a19b-e41d12500b82" name="Changes" comment="some general work">
+      <change afterPath="$PROJECT_DIR$/static/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/display_project_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/contacts_styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/contacts_styling.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/projects_styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/projects_styling.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/data_structures_and_algos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/data_structures_and_algos.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/django_projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/django_projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/flask_repos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flask_repos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/other_projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/other_projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_page/main_page/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_page/main_page/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_page/main_page/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_page/main_page/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_page/main_page/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_page/main_page/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_page/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_page/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +122,7 @@
       <workItem from="1728110577301" duration="15153000" />
       <workItem from="1728196087990" duration="19693000" />
       <workItem from="1728235557548" duration="6953000" />
-      <workItem from="1728281149195" duration="6542000" />
+      <workItem from="1728281149195" duration="10292000" />
     </task>
     <task id="LOCAL-00001" summary="Web portfolio page init steps">
       <created>1727782150954</created>
@@ -205,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1728240220289</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="some general work">
+      <created>1728287769129</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1728287769129</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +230,7 @@
     <MESSAGE value="Bug Fixes with datebase. Phew.." />
     <MESSAGE value="Some work with templates and views." />
     <MESSAGE value="New model and template path fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="New model and template path fixes" />
+    <MESSAGE value="some general work" />
+    <option name="LAST_COMMIT_MESSAGE" value="some general work" />
   </component>
 </project>

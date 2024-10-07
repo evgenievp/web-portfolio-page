@@ -1,0 +1,33 @@
+{% load static %}
+{% include 'head.html' %}
+<link rel="stylesheet" href="{% static 'css/projects_styling.css' %}">
+<body data-bs-theme="dark">
+{% include 'nav.html' %}
+<div class="main-container">
+    <div class="card">
+        <div class="card-body">
+            <form action="{% url 'display project' item.id %}" method="POST">
+                {% csrf_token %}
+                <h2>Title: {{ item.title }}</h2>
+                <p>Description:</p>
+                <p> {{ item.description }}</p>
+                <a href="{{ item.url_link }}">Go to GitHub of repo</a>
+                <br>
+                <div class="buttons">
+                    <button name="vote" value="like" type="submit" class="btn btn-success">Like</button>
+                    <button name="vote" value="dislike" type="submit" class="btn btn-danger">Disike</button>
+                </div>
+
+                <p>Current Rating: {{ item.all_votes }}</p>
+                <a href="{% url 'display project' item.id %}">
+                    <button type="button" class="btn btn-light" id="contact-button">Return to main page</button>
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</body>
+{% include 'footer.html' %}
+

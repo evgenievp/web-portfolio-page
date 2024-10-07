@@ -4,7 +4,7 @@ from django.db.models import F
 
 import web_page
 from web_page.main_page.forms import Project
-from web_page.main_page.models import ApplicationModel
+from web_page.main_page.models import ApplicationModel, AboutMeModel
 
 
 class MainPage(views.TemplateView):
@@ -15,7 +15,7 @@ def django_page_view(request):
     apps = ApplicationModel.objects.all().filter(type_of_application__exact='Django Apps')
     form = Project(request.POST)
     context = {
-        'django_apps': apps,
+        'apps': apps,
         'form': form,
     }
 
@@ -59,7 +59,10 @@ class ContactsPageView(views.TemplateView):
     template_name = 'contacts.html'
 
 
-class AboutPageView(views.TemplateView):
+class AboutPageView(views.DetailView):
+    model = AboutMeModel
     template_name = 'about.html'
+    context_object_name = 'model'
 
-
+    def get_object(self):
+        return AboutMeModel.objects.first()

@@ -1,65 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django projects</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../static/css/projects_styling.css">
-</head>
+{% include 'head.html' %}
 <body data-bs-theme="dark">
-    <div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'index page' %}">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html">About me</a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a class="nav-link" href="contacts.html">Contacts</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-    </div>
-
-
+{% include 'nav.html' %}
+<link rel="stylesheet" href="../static/css/data_structures_styling.css">
+<div class="page-container">
     <div class="main-container">
         <div class="card">
             <div class="card-body">
-                <h3>Projects I'm happy to share</h3>
-                <ul>
+                <form action="{% url 'index page' %}" method="POST">
+                    {% csrf_token %}
+                    {% if apps %}
+                        <h3>Data Structures and Algorithms:</h3>
+                        {% for item in apps %}
+                            <ul style="list-style-type: none">
+                                <li>
+                                    <a href="{% url 'display project' item.pk %}">
+                                        <div class="display-inline">
+                                            <img src="../static/images/service.png">
+                                            <h2>{{ item.title }}</h2>
+                                        </div>
+                                    </a>
+                                    <input type="hidden" name="item_id" value="{{ all_votes }}">
+                                    <p>Rating: {{ item.all_votes }}</p>
+                                </li>
+                            </ul>
+                        {% endfor %}
+                    {% else %}
+                        <h3>Still no Data Structures and Algorithms to show. :(</h3>
+                    {% endif %}
 
-                </ul>
-                <a href="{% url 'index page' %}"><button type="button" class="btn btn-light" id="contact-button">Return to main page</button></a>
+                    <a href="{% url 'index page' %}">
+                        <button type="button" class="btn btn-light" id="contact-button">Return to main page</button>
+                    </a>
+                </form>
             </div>
         </div>
     </div>
-
-    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-        <div class="col mb-3">
-          <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-          </a>
-          <p class="text-body-secondary">Copyrights reserved © 2024</p>
-        </div>
-
-        <div class="col mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="{% url 'index page' %}" class="nav-link p-0 text-body-secondary">Home</a></li>
-            <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-body-secondary">About</a></li>
-          </ul>
-        </div>
-      </footer>
+</div>
+{% include 'footer.html' %}
 </body>
-</html>

@@ -22,6 +22,7 @@ body {
         align-items: center;
         box-sizing: border-box;
         vertical-align: center;
+        border: 2px solid #83d2df;
     }
 
 img {

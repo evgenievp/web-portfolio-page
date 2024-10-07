@@ -1,30 +1,18 @@
+{% load static %}
 {% include 'head.html' %}
-<link rel="stylesheet" href="../static/css/about.css">
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
 <body data-bs-theme="dark">
-    {% include 'nav.html' %}
-    <div class="main-container">
-        <div class="card">
-            <div class="card-body">
-                <h2>About:</h2>
-                <p class="card-text">Hi, I'm Petar Evtimov, a passionate software developer based in Sofia, Bulgaria. My strong background is in Python. I have also knowledge in background languages Java and C. My expertise lies in web development (using Django and Flask) and problem-solving through algorithms and data structures. I enjoy taking on challenging projects that require me to apply both creativity and technical skills to find efficient solutions. I graduated from Software University, where I completed the Python Web Developer Program, and I hold a Master's degree in Philosophy. This unique combination of technical and analytical skills allows me to approach software development with both a problem-solving mindset and a deep understanding of user experience and ethics in technology.</p>
-                <h2>What I do:</h2>
-                <p>Web Development: I build dynamic and responsive web applications, integrating frontend technologies like HTML, CSS, and JavaScript with robust backend systems using Django and RESTful APIs.
-                    Software Engineering: I design and implement high-quality software solutions using modern technologies and frameworks.
-                    Continuous Learning: I am constantly refining my skills, exploring new programming languages, and keeping up with the latest trends in software development. I regularly update my GitHub with new personal projects and contributions to open-source repositories.
-                </p>
-                <h2>Why Work With me?</h2>
-                <p>I have a strong background not only in software development but also in client collaboration and teamwork. During my time at Gamma Consult, I worked closely with both clients and team members to gather requirements, implement software solutions, and ensure that projects were delivered on time and met client expectations.
-                </p>
-                <ul>
-                    <li>Client Collaboration: I’ve worked directly with clients to understand their needs and translate those into technical solutions. My focus is on clear communication, managing expectations, and delivering functional and user-friendly applications.</li>
-                    <li>Teamwork: I thrive in collaborative environments, where I can share ideas, participate in code reviews, and work together with other developers to solve complex problems. I believe that teamwork is key to delivering high-quality software.</li>
-                </ul>
-                <p>Whether working individually or as part of a team, I am committed to delivering exceptional results that meet both client and business needs.</p>
-                <a href="{% url 'contacts page' %}"><button type="button" class="btn btn-light" id="contact-button">Contact me</button></a>
-              </div>
-        </div>
+{% include 'nav.html' %}
+<div class="main-container">
+    <div class="card">
+        <h2>What I do:</h2>
+        <p>{{ model.info }}</p>
+        <a href="{% url 'contacts page' %}">
+            <button type="button" class="btn btn-light" id="contact-button">Contact me</button>
+        </a>
     </div>
+</div>
 
-    {% include 'footer.html' %}
+{% include 'footer.html' %}
 
 </body>

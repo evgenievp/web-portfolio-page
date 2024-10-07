@@ -1,36 +1,40 @@
 {% include 'head.html' %}
 <body data-bs-theme="dark">
 {% include 'nav.html' %}
-<link rel="stylesheet" href="../static/css/projects_styling.css">
-<div class="main-container">
-    <div class="card">
-        <div class="card-body">
-            <h3>Projects I'm happy to share:</h3>
-            <form action="{% url 'index page' %}" method="POST">
-                {% csrf_token %}
-                {% if django_apps %}
-                    {% for item in django_apps %}
-                        <ul style="list-style-type: none">
-                            <li>
-                                <a href="{% url 'display project' item.pk %}" style="text-decoration: none">
-                                    <div class="display-inline" style="display: flex; align-items: center; margin: 10px">
-                                        <img src="../static/images/service.png" style="text-decoration: none; margin-right: 5px;" >
-                                        <h2>{{ item.title }}</h2>
-                                    </div>
-                                </a>
-                                <input type="hidden" name="item_id" value="{{ all_votes }}">
-                                <p>Rating: {{ item.all_votes }}</p>
-                            </li>
-                        </ul>
-                    {% endfor %}
-                {% endif %}
-                <a href="{% url 'index page' %}" style="text-decoration: none">
-                    <button type="button" class="btn btn-light" id="contact-button" style="text-decoration: none">Return to main page</button>
-                </a>
-            </form>
+<link rel="stylesheet" href="../static/css/web_pages.css">
+<div class="page-container">
+    <div class="main-container">
+        <div class="card">
+            <div class="card-body">
+                <form action="{% url 'index page' %}" method="POST">
+                    {% csrf_token %}
+                    {% if apps %}
+                        <h3>Projects I'm happy to share:</h3>
+                        {% for item in apps %}
+                            <ul style="list-style-type: none">
+                                <li>
+                                    <a href="{% url 'display project' item.pk %}">
+                                        <div class="display-inline">
+                                            <img src="../static/images/service.png">
+                                            <h2>{{ item.title }}</h2>
+                                        </div>
+                                    </a>
+                                    <input type="hidden" name="item_id" value="{{ all_votes }}">
+                                    <p>Rating: {{ item.all_votes }}</p>
+                                </li>
+                            </ul>
+                        {% endfor %}
+                    {% else %}
+                        <h3>Still nothing here. :(</h3>
+                    {% endif %}
+
+                    <a href="{% url 'index page' %}">
+                        <button type="button" class="btn btn-light" id="contact-button">Return to main page</button>
+                    </a>
+                </form>
+            </div>
         </div>
     </div>
 </div>
-
 {% include 'footer.html' %}
 </body>

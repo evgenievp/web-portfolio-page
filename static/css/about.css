@@ -6,40 +6,71 @@ body {
 a {
     text-decoration: none;
 }
+
+h2 {
+    margin-top: -110px;
+    margin-bottom: 30px;
+}
+button {
+    margin-top: 10px;
+}
+
+p {
+    margin: 10px;
+    font-size: 16px;
+
+}
 .main-container {
+    flex-grow: 1;
     background-image: url('../images/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
+    min-height: 100vh;
     height: 60vh;
-    width: 100%;    
+    width: 100%;
     display: flex;
     justify-content: center;
-    overflow-y: auto;
+    overflow-y: scroll;
+    padding: 20px;
+    margin: 10px;
+
+}
     
     .card {
-        box-sizing:  border-box;
+        box-sizing: border-box;
         overflow-y: auto;
+        align-items: center;
+        justify-content: center;
         overflow-x: hidden;
-        margin: 20px;
-        margin-top: 50px;
-        margin-bottom: 100px;
-        height: 80%;
+        height: auto;
+        max-width: 1200px;
         width: 160vh;
-        padding: 30px;       
+        padding: 30px;
+        border: 2px solid #83d2df;
 
-        #contact-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 35px;
-            width: 140px;
-            
-        }
-       
-        
+
     }
+
+
+
+#contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 35px;
+    width: 140px;
+    margin: 20px;
+
+}
+
+
+
+
+
+.card-body {
+    overflow-y: auto;
 }
 
 footer {

@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5013e08-3200-4fcd-a19b-e41d12500b82" name="Changes" comment="some general work">
-      <change afterPath="$PROJECT_DIR$/static/css/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/display_project_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_page/procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/django_projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/django_projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_page/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_page/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +121,7 @@
       <workItem from="1728110577301" duration="15153000" />
       <workItem from="1728196087990" duration="19693000" />
       <workItem from="1728235557548" duration="6953000" />
-      <workItem from="1728281149195" duration="10292000" />
+      <workItem from="1728281149195" duration="13479000" />
     </task>
     <task id="LOCAL-00001" summary="Web portfolio page init steps">
       <created>1727782150954</created>
@@ -201,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1728287769129</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="some general work">
+      <created>1728291742799</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1728291742799</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,4 +1,4 @@
-@import "../static/css/reset.css";
+@import "../staticfiles/css/reset.css";
 html, body {
     height: 100%;
     margin: 0;
@@ -10,15 +10,17 @@ html, body {
 
 
 .main-container {
-    background-image: url('../images/background.jpg');
+    background-image: url('images/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     height: 60vh;
-    width: 100vw;    
+    width: 100vw;
     display: flex;
     justify-content: center;
+
+}
     
     
     .card {
@@ -28,14 +30,15 @@ html, body {
         width: 33%;
         border: 2px solid #83d2df;
         font-size: 16px;
+    }
         img {
             height: 55%;
         }
         button {
             border-radius: 5px;
         }
-    }
-}
+
+
 
 footer {
     background-color: black;

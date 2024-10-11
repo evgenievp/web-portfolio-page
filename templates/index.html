@@ -1,5 +1,5 @@
+{% extends 'head.html' %}
 {% load static %}
-{% include 'head.html' %}
 <link rel="stylesheet" href="../static/css/styles.css">
 <body data-bs-theme="dark">
 
@@ -7,7 +7,7 @@
     <div class="main-container">
       <a href=" {% url 'django page' %}">
         <div class="card" style="width: 18rem;">
-            <img src="{% static 'images/django.jpg' %}" class="card-img-top" alt="...">
+            <img src="{% static 'images/django.jpg' %}" class="card-img-top" alt="Django cover">
             <div class="card-body">
               <p class="card-text">Here I show my django knowledge.</p>
             </div>
@@ -15,7 +15,7 @@
           </a>
           <a href="{% url 'data structures' %}">
           <div class="card" style="width: 18rem;">
-            <img src="../static/images/dsa.jpg" class="card-img-top" alt="...">
+            <img src="{%  static 'images/dsa.jpg' %}" alt="...">
             <div class="card-body">
               <p class="card-text">Data Structures and Algorithms implementations repo.</p>
             </div>

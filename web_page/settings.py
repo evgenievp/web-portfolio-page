@@ -12,12 +12,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = 'django-insecure-zns)+s@#o(78)!gum1u89c4r26ss(oudc70p5@_*^$d_$b6(db'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", "False")
+DEBUG = False
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(", ")
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -69,8 +69,9 @@ WSGI_APPLICATION = 'web_page.wsgi.application'
 
 
 
-DATABASE_URL = os.environ.get("DATABASE_URL")
-DATABASES["default"] = dj_database_url.parse(DATABASE_URL)
+database_url = 'postgresql://petar_web_page:jnQhIv0tLAD2Yp8DlFjBbF2ynF1hJ86h@dpg-cs4gjd0gph6c73c1044g-a.oregon-postgres.render.com/postgres1_0kan'
+
+DATABASES["default"] = dj_database_url.parse(database_url)
 
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
@@ -109,7 +110,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # Default primary key field type

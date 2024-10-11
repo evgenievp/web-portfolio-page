@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5013e08-3200-4fcd-a19b-e41d12500b82" name="Changes" comment="ready for deploy with basic settings.">
-      <change afterPath="$PROJECT_DIR$/static/css/footer.css" afterDir="false" />
+    <list default="true" id="e5013e08-3200-4fcd-a19b-e41d12500b82" name="Changes" comment="ready for deploy with settings.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_page/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_page/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +37,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -130,7 +128,7 @@
       <workItem from="1728402568235" duration="1802000" />
       <workItem from="1728451329296" duration="37000" />
       <workItem from="1728640948481" duration="3058000" />
-      <workItem from="1728658372379" duration="3566000" />
+      <workItem from="1728658372379" duration="4479000" />
     </task>
     <task id="LOCAL-00001" summary="Web portfolio page init steps">
       <created>1727782150954</created>
@@ -223,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1728295627226</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="ready for deploy with settings.">
+      <created>1728662489152</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1728662489152</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +259,7 @@
     <MESSAGE value="New model and template path fixes" />
     <MESSAGE value="some general work" />
     <MESSAGE value="ready for deploy with basic settings." />
-    <option name="LAST_COMMIT_MESSAGE" value="ready for deploy with basic settings." />
+    <MESSAGE value="ready for deploy with settings." />
+    <option name="LAST_COMMIT_MESSAGE" value="ready for deploy with settings." />
   </component>
 </project>

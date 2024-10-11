@@ -17,7 +17,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "False")
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS")
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(", ")
 
 
 # Application definition
@@ -68,10 +68,9 @@ WSGI_APPLICATION = 'web_page.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 
-key='django-insecure-zns)+s@#o(78)!gum1u89c4r26ss(oudc70p5@_*^$d_$b6(db'
-database_url = 'postgresql://petar_web_page:jnQhIv0tLAD2Yp8DlFjBbF2ynF1hJ86h@dpg-cs4gjd0gph6c73c1044g-a.oregon-postgres.render.com/postgres1_0kan'
-database_url = os.environ.get("DATABASE_URL")
-DATABASES["default"] = dj_database_url.parse(database_url)
+
+DATABASE_URL = os.environ.get("DATABASE_URL")
+DATABASES["default"] = dj_database_url.parse(DATABASE_URL)
 
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 

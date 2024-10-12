@@ -1,8 +1,6 @@
 {% extends 'head.html' %}
 {% load static %}
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    {% include 'nav.html' %}
     <div class="main-container">
       <a href=" {% url 'django page' %}">
         <div class="card" style="width: 18rem;">
@@ -22,7 +20,7 @@
           </a>
           <a href="{% url 'flask page' %}">
           <div class="card" style="width: 18rem;">
-            <img src="../static/images/flask.jpg" class="card-img-top" alt="...">
+            <img src= "{% static 'images/flask.jpg' %}" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">My Flask repos.</p>
             </div>
@@ -30,14 +28,12 @@
           </a>
           <a href="{% url 'other projects' %}">
           <div class="card" style="width: 18rem;">
-            <img src="../static/images/other.jpg" class="card-img-top" alt="...">
+            <img src="{% static 'images/other_projects.jpg' %}" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">Other projects by Petar Evtimov.</p>
             </div>
           </div>
           </a>
     </div>
-
-    {% include 'footer.html' %}
 
 {% endblock %}

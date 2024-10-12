@@ -1,8 +1,6 @@
+{% extends 'head.html' %}
+{% block content %}
 {% load static %}
-{% include 'head.html' %}
-<link rel="stylesheet" href="{% static 'css/projects_styling.css' %}">
-<body data-bs-theme="dark">
-{% include 'nav.html' %}
 <div class="main-container">
     <div class="card">
         <div class="card-body">
@@ -27,7 +25,4 @@
     </div>
 </div>
 
-
-</body>
-{% include 'footer.html' %}
-
+{% endblock %}

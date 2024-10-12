@@ -1,7 +1,6 @@
-{% include 'head.html' %}
-<body data-bs-theme="dark">
-{% include 'nav.html' %}
-<link rel="stylesheet" href="../static/css/web_pages.css">
+{% extends 'head.html' %}
+{% block content %}
+{% load static %}
 <div class="page-container">
     <div class="main-container">
         <div class="card">
@@ -15,7 +14,7 @@
                                 <li>
                                     <a href="{% url 'display project' item.pk %}">
                                         <div class="display-inline">
-                                            <img src="../static/images/service.png">
+                                            <img src="{% static 'images/service.png' %}" alt="service icon">
                                             <h2>{{ item.title }}</h2>
                                         </div>
                                     </a>
@@ -27,7 +26,6 @@
                     {% else %}
                         <h3>Still nothing here. :(</h3>
                     {% endif %}
-
                     <a href="{% url 'index page' %}">
                         <button type="button" class="btn btn-light" id="contact-button">Return to main page</button>
                     </a>
@@ -36,5 +34,4 @@
         </div>
     </div>
 </div>
-{% include 'footer.html' %}
-</body>
+{% endblock %}

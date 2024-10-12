@@ -1,6 +1,8 @@
 import os
 from pathlib import Path
 import dj_database_url
+import mimetypes
+mimetypes.add_type("text/css", ".css", True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 from django.conf.global_settings import DATABASES
@@ -12,12 +14,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-zns)+s@#o(78)!gum1u89c4r26ss(oudc70p5@_*^$d_$b6(db'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get("DEBUG", "False")
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS")
 
 
 # Application definition
@@ -40,6 +42,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'web_page.urls'
@@ -69,7 +72,7 @@ WSGI_APPLICATION = 'web_page.wsgi.application'
 
 
 
-database_url = 'postgresql://petar_web_page:jnQhIv0tLAD2Yp8DlFjBbF2ynF1hJ86h@dpg-cs4gjd0gph6c73c1044g-a.oregon-postgres.render.com/postgres1_0kan'
+database_url = os.environ.get("DATABASE_URL")
 
 DATABASES["default"] = dj_database_url.parse(database_url)
 
@@ -110,7 +113,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+ROOT = os.path.join(BASE_DIR, 'static/')
 
 
 # Default primary key field type

@@ -2,10 +2,11 @@ import os
 from pathlib import Path
 import dj_database_url
 import mimetypes
+from django.conf.global_settings import DATABASES
+
 mimetypes.add_type("text/css", ".css", True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-from django.conf.global_settings import DATABASES
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -115,7 +116,7 @@ STATICFILES_DIRS = [
 ]
 ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL = 'static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/')
 
 
 # Default primary key field type

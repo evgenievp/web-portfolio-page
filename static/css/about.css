@@ -33,7 +33,7 @@ p {
 }
 .main-container {
     flex-grow: 1;
-    background-image: url('/images/About-us-min.jpg');
+    background-image: url('../../media/images/About-us-min.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -50,7 +50,7 @@ p {
     
     .card {
         box-sizing: border-box;
-        background-image: url('/images/background.jpg');
+        background-image: url('../../media/images/background.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         overflow-y: auto;

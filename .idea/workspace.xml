@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bffc7bdb-750b-4074-ab80-d728ebf89f29" name="Changes" comment="Move images directory to media">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/data_structures_and_algos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/data_structures_and_algos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/display_project_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/display_project_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/django_projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/django_projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/flask_repos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flask_repos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nav.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/other_projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/other_projects.html" afterDir="false" />
+    <list default="true" id="bffc7bdb-750b-4074-ab80-d728ebf89f29" name="Changes" comment="proper routes after for css.">
+      <change beforePath="$PROJECT_DIR$/static/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/contacts_styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/contacts_styling.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/data_structures_styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/data_structures_styling.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/error_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/error_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/other_projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/other_projects.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/projects_styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/projects_styling.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/web_pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/web_pages.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728748328581</updated>
       <workItem from="1728748329717" duration="2191000" />
-      <workItem from="1728795101091" duration="1521000" />
+      <workItem from="1728795101091" duration="1886000" />
     </task>
     <task id="LOCAL-00001" summary="Move images directory to media">
       <created>1728795873304</created>
@@ -86,7 +84,21 @@
       <option name="project" value="LOCAL" />
       <updated>1728795873304</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="proper routes after for css.">
+      <created>1728796662717</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728796662717</updated>
+    </task>
+    <task id="LOCAL-00003" summary="proper routes after for css.">
+      <created>1728796708217</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728796708217</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +117,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Move images directory to media" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move images directory to media" />
+    <MESSAGE value="proper routes after for css." />
+    <option name="LAST_COMMIT_MESSAGE" value="proper routes after for css." />
   </component>
 </project>

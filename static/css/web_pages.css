@@ -34,7 +34,7 @@ img {
 
 .main-container {
     flex: 1;
-    background-image: url('images/web_development.jpg');
+    background-image: url('../../media/images/web_development.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

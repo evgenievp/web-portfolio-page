@@ -1,4 +1,4 @@
-@import "/css/reset.css";
+@import "../css/reset.css";
 html, body {
     height: 100%;
     margin: 0;
@@ -10,7 +10,7 @@ html, body {
 
 
 .main-container {
-    background-image: url('images/background.jpg');
+    background-image: url('../../media/images/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

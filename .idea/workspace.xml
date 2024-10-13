@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5013e08-3200-4fcd-a19b-e41d12500b82" name="Changes" comment="templates...">
+    <list default="true" id="bffc7bdb-750b-4074-ab80-d728ebf89f29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/contacts_styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/contacts_styling.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/data_structures_styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/data_structures_styling.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/error_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/error_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/other_projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/other_projects.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/projects_styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/projects_styling.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/web_pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/web_pages.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/About-us-min.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/About-us-min.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/background.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/coding_data_structures.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/coding_data_structures.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/django.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/django.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/dsa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/dsa.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/error.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/error.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/flask.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/flask.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/other.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/other.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/other_projects.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/other_projects.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/service.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/service.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/web_development.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/web_development.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/data_structures_and_algos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/data_structures_and_algos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/display_project_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/display_project_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/django_projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/django_projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/flask_repos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flask_repos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/head.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nav.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/other_projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/other_projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_page/main_page/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_page/main_page/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_page/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_page/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,55 +29,29 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
-    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-        <option value="HTML File" />
-        <option value="CSS File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2mpmWwbd4M6VqKxCCsSJDBSqtdu" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2nLNK2DP3kmdBMfhV6sMDlUORZb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Programs/Programming/PORTFOLIO/web_page&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;,
-      &quot;postgresql&quot;
-    ]
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
 }</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Programs\Programming\PORTFOLIO\web_page\static\images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Programs\Programming\PORTFOLIO\web_page\static\css" />
-      <recent name="D:\Programs\Programming\PORTFOLIO\web_page\static\gears" />
+      <recent name="D:\Programs\Programming\PORTFOLIO\web_page\media" />
     </key>
   </component>
   <component name="RunManager">
@@ -87,23 +61,12 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="web_page.settings" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\evgen\OneDrive\Desktop\to_do_app\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="net.ashald.envfile">
-        <option name="IS_ENABLED" value="true" />
-        <option name="IS_SUBST" value="false" />
-        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
-        <option name="IS_IGNORE_MISSING_FILES" value="false" />
-        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
-        <ENTRIES>
-          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
-        </ENTRIES>
-      </EXTENSION>
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
       <option name="host" value="" />
@@ -119,206 +82,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e5013e08-3200-4fcd-a19b-e41d12500b82" name="Changes" comment="" />
-      <created>1727781926486</created>
+      <changelist id="bffc7bdb-750b-4074-ab80-d728ebf89f29" name="Changes" comment="" />
+      <created>1728748328581</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1727781926486</updated>
-      <workItem from="1727781927735" duration="2258000" />
-      <workItem from="1727786490264" duration="3530000" />
-      <workItem from="1727930809603" duration="5492000" />
-      <workItem from="1727942516006" duration="255000" />
-      <workItem from="1727955742070" duration="1373000" />
-      <workItem from="1727968960657" duration="664000" />
-      <workItem from="1727969736704" duration="39000" />
-      <workItem from="1727979386421" duration="594000" />
-      <workItem from="1728034001009" duration="1299000" />
-      <workItem from="1728040306098" duration="7799000" />
-      <workItem from="1728106053420" duration="3095000" />
-      <workItem from="1728110061109" duration="501000" />
-      <workItem from="1728110577301" duration="15153000" />
-      <workItem from="1728196087990" duration="19693000" />
-      <workItem from="1728235557548" duration="6953000" />
-      <workItem from="1728281149195" duration="16769000" />
-      <workItem from="1728314368124" duration="3000" />
-      <workItem from="1728328260604" duration="162000" />
-      <workItem from="1728372946020" duration="7000" />
-      <workItem from="1728373543478" duration="12000" />
-      <workItem from="1728402568235" duration="1802000" />
-      <workItem from="1728451329296" duration="37000" />
-      <workItem from="1728640948481" duration="3058000" />
-      <workItem from="1728658372379" duration="13662000" />
-      <workItem from="1728707598408" duration="3369000" />
+      <updated>1728748328581</updated>
+      <workItem from="1728748329717" duration="2191000" />
+      <workItem from="1728795101091" duration="737000" />
     </task>
-    <task id="LOCAL-00001" summary="Web portfolio page init steps">
-      <created>1727782150954</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1727782150954</updated>
-    </task>
-    <task id="LOCAL-00002" summary="requirements file">
-      <created>1727784357435</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1727784357435</updated>
-    </task>
-    <task id="LOCAL-00003" summary="add gunicorn to requirements.txt">
-      <created>1727801362776</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1727801362776</updated>
-    </task>
-    <task id="LOCAL-00004" summary="add gunicorn to requirements.txt">
-      <created>1727931258288</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1727931258288</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Add error page.">
-      <created>1727936121583</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1727936121583</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Some work with forms, models and templates.">
-      <created>1728066245155</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1728066245155</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Bug Fixes with datebase. Phew..">
-      <created>1728119943968</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1728119943968</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Some work with templates and views.">
-      <created>1728224229464</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1728224229464</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Some work with templates and views.">
-      <created>1728230143729</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1728230143729</updated>
-    </task>
-    <task id="LOCAL-00010" summary="New model and template path fixes">
-      <created>1728240220289</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1728240220289</updated>
-    </task>
-    <task id="LOCAL-00011" summary="some general work">
-      <created>1728287769129</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1728287769129</updated>
-    </task>
-    <task id="LOCAL-00012" summary="some general work">
-      <created>1728291742799</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1728291742799</updated>
-    </task>
-    <task id="LOCAL-00013" summary="ready for deploy with basic settings.">
-      <created>1728295627226</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1728295627226</updated>
-    </task>
-    <task id="LOCAL-00014" summary="ready for deploy with settings.">
-      <created>1728662489152</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1728662489152</updated>
-    </task>
-    <task id="LOCAL-00015" summary="ready for deploy with settings.">
-      <created>1728663404403</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1728663404403</updated>
-    </task>
-    <task id="LOCAL-00016" summary="forgotten &gt;">
-      <created>1728667481455</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1728667481455</updated>
-    </task>
-    <task id="LOCAL-00017" summary="static file">
-      <created>1728671077842</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1728671077842</updated>
-    </task>
-    <task id="LOCAL-00018" summary="static file">
-      <created>1728671450674</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1728671450674</updated>
-    </task>
-    <task id="LOCAL-00019" summary="static files">
-      <created>1728672499346</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1728672499346</updated>
-    </task>
-    <task id="LOCAL-00020" summary="static files">
-      <created>1728672903191</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1728672903191</updated>
-    </task>
-    <task id="LOCAL-00021" summary="static files">
-      <created>1728673214072</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1728673214072</updated>
-    </task>
-    <task id="LOCAL-00022" summary="static files">
-      <created>1728673582215</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1728673582215</updated>
-    </task>
-    <task id="LOCAL-00023" summary="settings fix">
-      <created>1728674502628</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1728674502628</updated>
-    </task>
-    <task id="LOCAL-00024" summary="templates...">
-      <created>1728675811393</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1728675811393</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,38 +105,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/venv" />
-    </ignored-roots>
-    <MESSAGE value="Web portfolio page init steps" />
-    <MESSAGE value="requirements file" />
-    <MESSAGE value="add gunicorn to requirements.txt" />
-    <MESSAGE value="Add error page." />
-    <MESSAGE value="Some work with forms, models and templates." />
-    <MESSAGE value="Bug Fixes with datebase. Phew.." />
-    <MESSAGE value="Some work with templates and views." />
-    <MESSAGE value="New model and template path fixes" />
-    <MESSAGE value="some general work" />
-    <MESSAGE value="ready for deploy with basic settings." />
-    <MESSAGE value="ready for deploy with settings." />
-    <MESSAGE value="forgotten &gt;" />
-    <MESSAGE value="static file" />
-    <MESSAGE value="static files" />
-    <MESSAGE value="settings fix" />
-    <MESSAGE value="templates..." />
-    <option name="LAST_COMMIT_MESSAGE" value="templates..." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="django-line">
-          <url>file://$PROJECT_DIR$/templates/about.html</url>
-          <line>3</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

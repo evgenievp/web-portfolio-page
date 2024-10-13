@@ -3,9 +3,9 @@ from pathlib import Path
 import dj_database_url
 import mimetypes
 from django.conf.global_settings import DATABASES
-
+from dotenv import load_dotenv
 mimetypes.add_type("text/css", ".css", True)
-
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -15,12 +15,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", "False")
+DEBUG = os.environ.get("DEBUG", "False").split(",")
+if DEBUG:
+    SECRET_KEY = 'test'
+else:
+    SECRET_KEY = os.environ.get("SECRET_KEY")
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(" ")
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
 
 
 # Application definition
@@ -71,11 +75,13 @@ WSGI_APPLICATION = 'web_page.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+if DEBUG:
+    DATABASE_URL = 'postgresql://petar_web_page:jnQhIv0tLAD2Yp8DlFjBbF2ynF1hJ86h@dpg-cs4gjd0gph6c73c1044g-a.oregon-postgres.render.com/postgres1_0kan'
+    DATABASES["default"] = dj_database_url.parse(DATABASE_URL)
+else:
+    DATABASE_URL = os.environ.get("DATABASE_URL")
+    DATABASES['default'] = os.environ.get("DATABASE_URL")
 
-
-database_url = os.environ.get("DATABASE_URL")
-
-DATABASES["default"] = dj_database_url.parse(database_url)
 
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
@@ -115,8 +121,8 @@ STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
 ROOT = os.path.join(BASE_DIR, 'static/')
-MEDIA_URL = 'static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/')
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Default primary key field type

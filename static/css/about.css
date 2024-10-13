@@ -1,7 +1,3 @@
-body {
-    overflow-x: hidden;
-    
-}
 
 a {
     text-decoration: none;
@@ -35,6 +31,7 @@ p {
     flex-grow: 1;
     background-image: url('../../media/images/About-us-min.jpg');
     background-size: cover;
+    box-sizing: border-box;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -42,7 +39,7 @@ p {
     width: auto;
     display: flex;
     justify-content: center;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 20px;
     margin: 10px;
 

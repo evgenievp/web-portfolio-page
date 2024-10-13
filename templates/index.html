@@ -1,10 +1,11 @@
 {% extends 'head.html' %}
 {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 {% block content %}
     <div class="main-container">
       <a href=" {% url 'django page' %}">
         <div class="card" style="width: 18rem;">
-            <img src="{% static 'images/django.jpg' %}" class="card-img-top" alt="Django cover">
+            <img src="{% static '../media/images/django.jpg' %}" class="card-img-top" alt="Django cover">
             <div class="card-body">
               <p class="card-text">Here I show my django knowledge.</p>
             </div>

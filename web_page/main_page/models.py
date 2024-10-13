@@ -8,13 +8,13 @@ def min_length_validator(value, min_length=5):
 
 
 class ApplicationModel(models.Model):
-    DJANGO_APP = 'Django App'
+    DJANGO_APP = 'Django Apps'
     DATA_STRUCTURES = 'Data Structures'
     OTHER = 'Other'
     FLASK_APP = 'Flask Apps'
 
     APPLICATION_CHOICES = [
-        (DJANGO_APP, 'Django App'),
+        (DJANGO_APP, 'Django Apps'),
         (DATA_STRUCTURES, 'Data Structures'),
         (OTHER, 'Other'),
         (FLASK_APP, 'Flask Apps'),

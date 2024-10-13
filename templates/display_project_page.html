@@ -1,12 +1,12 @@
 {% extends 'head.html' %}
 {% block content %}
-{% load static %}
-        <link rel="stylesheet" href="{% static 'css/projects_styling.css' %}">
-<div class="main-container">
-    <div class="card">
-        <div class="card-body">
-            <form action="{% url 'display project' item.id %}" method="POST">
-                {% csrf_token %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/projects_styling.css' %}">
+    <form action="{% url 'display project' item.id %}" method="POST">
+        {% csrf_token %}
+        <div class="main-container">
+            <div class="card">
+
                 <h2>Title: {{ item.title }}</h2>
                 <p>Description:</p>
                 <p> {{ item.description }}</p>
@@ -14,16 +14,15 @@
                 <br>
                 <div class="buttons">
                     <button name="vote" value="like" type="submit" class="btn btn-success">Like</button>
-                    <button name="vote" value="dislike" type="submit" class="btn btn-danger">Disike</button>
+                    <button name="vote" value="dislike" type="submit" class="btn btn-danger">Dislke</button>
                 </div>
 
                 <p>Current Rating: {{ item.all_votes }}</p>
-                <a href="{% url 'display project' item.id %}">
+                <a href="{% url 'index page' %}">
                     <button type="button" class="btn btn-light" id="contact-button">Return to main page</button>
                 </a>
-            </form>
-        </div>
-    </div>
-</div>
 
+            </div>
+        </div>
+    </form>
 {% endblock %}

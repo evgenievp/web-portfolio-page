@@ -8,9 +8,23 @@ def min_length_validator(value, min_length=5):
 
 
 class ApplicationModel(models.Model):
-    type_of_application = models.CharField(max_length=200,
-                                           default='Django Apps'
-                                           )
+    DJANGO_APP = 'Django App'
+    DATA_STRUCTURES = 'Data Structures'
+    OTHER = 'Other'
+    FLASK_APP = 'Flask Apps'
+
+    APPLICATION_CHOICES = [
+        (DJANGO_APP, 'Django App'),
+        (DATA_STRUCTURES, 'Data Structures'),
+        (OTHER, 'Other'),
+        (FLASK_APP, 'Flask Apps'),
+    ]
+
+    type_of_application = models.CharField(
+        max_length=20,
+        choices=APPLICATION_CHOICES,
+        default=DJANGO_APP,
+    )
     title = models.CharField(max_length=50,
                              null=False,
                              unique=True,

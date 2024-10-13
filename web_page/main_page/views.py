@@ -44,14 +44,32 @@ def display_project(request, pk):
 
 
 def data_structures_view(request):
-    return render(request, 'data_structures_and_algos.html')
+    apps = ApplicationModel.objects.all().filter(type_of_application__exact='Data Structures')
+    form = Project(request.POST)
+    context = {
+        'apps': apps,
+        'form': form,
+    }
+    return render(request, 'data_structures_and_algos.html', context=context)
 
 
 def flask_repos_view(request):
-    return render(request, 'flask_repos.html')
+    apps = ApplicationModel.objects.all().filter(type_of_application__exact='Flask Apps')
+    form = Project(request.POST)
+    context = {
+        'apps': apps,
+        'form': form,
+    }
+    return render(request, 'flask_repos.html', context=context)
 
 
 def other_projects_view(request):
+    apps = ApplicationModel.objects.all().filter(type_of_application__exact='Other')
+    form = Project(request.POST)
+    context = {
+        'apps': apps,
+        'form': form,
+    }
     return render(request, 'other_projects.html')
 
 

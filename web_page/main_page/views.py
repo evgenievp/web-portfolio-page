@@ -65,12 +65,12 @@ def flask_repos_view(request):
 
 def other_projects_view(request):
     apps = ApplicationModel.objects.all().filter(type_of_application__exact='Other')
-    form = Project(request.POST)
+    form = Project(request.POST or None)
     context = {
         'apps': apps,
         'form': form,
     }
-    return render(request, 'other_projects.html')
+    return render(request, 'other_projects.html', context=context)
 
 
 class ContactsPageView(views.TemplateView):

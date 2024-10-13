@@ -13,7 +13,7 @@ class MainPage(views.TemplateView):
 
 def django_page_view(request):
     apps = ApplicationModel.objects.all().filter(type_of_application__exact='Django Apps')
-    form = Project(request.POST)
+    form = Project(request.POST or request.GET)
     context = {
         'apps': apps,
         'form': form,
@@ -45,7 +45,7 @@ def display_project(request, pk):
 
 def data_structures_view(request):
     apps = ApplicationModel.objects.all().filter(type_of_application__exact='Data Structures')
-    form = Project(request.POST)
+    form = Project(request.POST or request.GET)
     context = {
         'apps': apps,
         'form': form,
@@ -55,7 +55,7 @@ def data_structures_view(request):
 
 def flask_repos_view(request):
     apps = ApplicationModel.objects.all().filter(type_of_application__exact='Flask Apps')
-    form = Project(request.POST)
+    form = Project(request.POST or request.GET)
     context = {
         'apps': apps,
         'form': form,
@@ -65,7 +65,7 @@ def flask_repos_view(request):
 
 def other_projects_view(request):
     apps = ApplicationModel.objects.all().filter(type_of_application__exact='Other')
-    form = Project(request.POST or None)
+    form = Project(request.POST or request.GET)
     context = {
         'apps': apps,
         'form': form,

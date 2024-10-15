@@ -1,14 +1,34 @@
+from django.contrib.auth.views import LoginView
+from django.urls import reverse_lazy
 from django.views import generic as views
 from django.shortcuts import render, redirect
 from django.db.models import F
+from django.contrib.auth import views as auth_views
+
 
 import web_page
-from web_page.main_page.forms import Project
-from web_page.main_page.models import ApplicationModel, AboutMeModel
+from web_page.main_page.forms import Project, RegisterForm
+from web_page.main_page.models import ApplicationModel, AboutMeModel, UserAccount
 
 
 class MainPage(views.TemplateView):
     template_name = 'index.html'
+
+
+class LoginPage(auth_views.LoginView):
+    form_class = LoginView
+    template_name = 'login_page.html'
+    next_page = reverse_lazy('index.html')
+
+
+class RegisterPage(views.CreateView):
+    template_name = 'register_page.html'
+    model = UserAccount
+    form_class = RegisterForm
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        return redirect('django page')
 
 
 def django_page_view(request):

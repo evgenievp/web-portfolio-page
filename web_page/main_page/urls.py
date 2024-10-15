@@ -15,6 +15,9 @@ urlpatterns = [
     path('contacts/', views.ContactsPageView.as_view(), name='contacts page'),
     path('about/', views.AboutPageView.as_view(), name='about page'),
     path('display-project/<int:pk>/', views.display_project, name='display project'),
+    path('login/', views.LoginView.as_view(), name='login page'),
+    path('register/', views.RegisterPage.as_view(), name='register page'),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

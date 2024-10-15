@@ -1,56 +1,76 @@
 @import "../css/reset.css";
-html, body {
-    height: 100%;
+
+body {
+
     margin: 0;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
+div .whole-page {
 
+}
 
 .main-container {
     background-image: url('../../media/images/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     height: 60vh;
     width: 100vw;
     display: flex;
     justify-content: center;
 
 }
-    
-    
-    .card {
-
-        margin: 20px;
-        height: 55%;
-        width: 33%;
-        border: 2px solid #83d2df;
-        font-size: 16px;
-    }
-        img {
-            height: 55%;
-        }
-        button {
-            border-radius: 5px;
-        }
 
 
+.card {
+
+    margin: 20px;
+    height: 55%;
+    width: 33%;
+    border: 2px solid #83d2df;
+    font-size: 16px;
+}
+
+img {
+    height: 55%;
+}
+
+button {
+    border-radius: 5px;
+}
+
+.form-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 500px;
+
+
+}
+
+div .form-check {
+    display: block;
+    align-content: center;
+    justify-content: center;
+    margin: 2px;
+}
+div .button {
+    display: block;
+    justify-content: center;
+    align-content: center;
+
+
+}
 
 footer {
-    background-color: black;
-    padding-left: 50px;
-
+    max-height: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
 }
-
-
-.col mb-3 {
-    margin-left: 200px;
-}
-
-
-
 

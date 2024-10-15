@@ -1,18 +1,38 @@
 body {
+    box-sizing: border-box;
     overflow-x: hidden;
+}
+.main-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    box-sizing:border-box;
+}
+.about-container {
+    background-image: url('../../media/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 120vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 }
+
 
 a {
     text-decoration: none;
 }
 
 h2 {
+    display: block;
     color: #e4c78f;
-    margin-top: -10px;
-    margin-bottom: 30px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-    padding: 10px;
+    padding: 2px;
     font-weight: 500;
     line-height: 1.6;
 }
@@ -22,50 +42,36 @@ button {
 
 p {
     color: #e4c78f;
-    margin: 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     font-size: 16px;
-    padding: 20px;
+    padding: 10px;
+    display: block;
+    overflow-y: auto;
     border-radius: 5px;
     font-weight: 500;
     line-height: 2;
 
 }
-.main-container {
-    flex-grow: 1;
-    background-image: url('../../media/images/About-us-min.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    height: auto;
-    width: auto;
+
+
+.card {
     display: flex;
     justify-content: center;
-    overflow-y: scroll;
+    background-image: url('../../media/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    box-sizing: border-box;
+    overflow-y: auto;
+    vertical-align: center;
+    width: 80%;
+    height: 90vh;
     padding: 20px;
-    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid #83d2df;
+
 
 }
-    
-    .card {
-        box-sizing: border-box;
-        background-image: url('../../media/images/background.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow-y: auto;
-        align-items: center;
-        justify-content: center;
-        overflow-x: hidden;
-        height: auto;
-        max-width: 1200px;
-        width: auto;
-        padding: 30px;
-        border: 2px solid #83d2df;
-
-
-    }
-
 
 
 #contact-button {
@@ -80,22 +86,10 @@ p {
 }
 
 
-
-
-
-.card-body {
-    overflow-y: auto;
-}
-
 footer {
-    background-color: black;
-    padding-left: 50px;
-
+    max-height: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
 }
-
-
-.col mb-3 {
-    margin-left: 200px;
-}
-
 

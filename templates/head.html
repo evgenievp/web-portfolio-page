@@ -12,48 +12,51 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
-
 </head>
-  <div>
+
+<body data-bs-theme="dark">
+<div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'index page' %}">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'about page' %}">About me</a>
-              </li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'index page' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about page' %}">About me</a>
+                    </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'contacts page' %}">Contacts</a>
-              </li>
-            </ul>
-          </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contacts page' %}">Contacts</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register page' %}">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register page' %}">Sign In</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
 </div>
-<body data-bs-theme="dark">
-{% block content %}
+<div class="main-container">
 
-{% endblock %}
-<footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-    <div class="col mb-3">
-        <a href="{% url 'index page' %}" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-        </a>
-        <p class="text-body-secondary" style="color: #83d2df;">Copyrights reserved © 2024</p>
+    {% block content %}
+
+    {% endblock %}
+<div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© 2024 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+      </ul>
     </div>
-    <div class="col mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="{% url 'index page' %}" class="nav-link p-0 text-body-secondary">Home</a>
-            </li>
-            <li class="nav-item mb-2"><a href="{% url 'about page' %}"
-                                         class="nav-link p-0 text-body-secondary">About</a></li>
-        </ul>
-    </div>
-</footer>
+
+</div>
 
 
 </body>

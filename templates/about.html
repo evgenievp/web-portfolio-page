@@ -1,16 +1,17 @@
 {% extends 'head.html' %}
 {% block content %}
-{% load static %}
-    <link rel="stylesheet" href="{% static 'css/about.css' %}">
-<div class="main-container">
-    <div id="div" class="card">
-        <h2>What I do:</h2>
-        <p>{{ model.info }}</p>
-        <a href="{% url 'contacts page' %}">
-            <button type="button" class="btn btn-light" id="contact-button">Contact me</button>
-        </a>
-    </div>
-</div>
+    {% load static %}
+    <div class="about-container">
+        <link rel="stylesheet" href="{% static 'css/about.css' %}">
 
+            <div id="div" class="card">
+                <h2>What I do:</h2>
+                <p>{{ model.info }}</p>
+                <a href="{% url 'contacts page' %}">
+                    <button type="button" class="btn btn-light" id="contact-button">Contact me</button>
+                </a>
+            </div>
+
+    </div>
 {% endblock %}
 

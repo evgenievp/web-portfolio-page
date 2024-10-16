@@ -36,6 +36,8 @@ img {
     height: auto;
     width: 100%;
     display: flex;
+    flex-direction:column;
+    align-items:center;
     justify-content: center;
     overflow-y: auto;
     border-radius: 5px;
@@ -86,7 +88,16 @@ form {
     width: 180px;
 
 }
-
+.buttons-authenticate {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:10px;
+}
+.buttons-authenticate a {
+    margin: 5px;
+}
 p {
     display: flex;
     justify-content: center;
@@ -97,11 +108,11 @@ p {
     flex-direction: column;
 }
 
-footer {
+#footer {
+    width: 100%;
     background-color: black;
     color: white;
     text-align: center;
     margin-top: auto;
 }
-
 

@@ -2,27 +2,33 @@
 {% block content %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/projects_styling.css' %}">
-    <form action="{% url 'display project' item.id %}" method="POST">
-        {% csrf_token %}
-        <div class="main-container">
-            <div class="card">
-
+    <div class="main-container">
+        <div class="card">
+            <form action="{% url 'display project' item.id %}" method="POST">
+                {% csrf_token %}
                 <h2>Title: {{ item.title }}</h2>
                 <p>Description:</p>
                 <p> {{ item.description }}</p>
                 <a href="{{ item.url_link }}">Go to GitHub of repo</a>
                 <br>
-                <div class="buttons">
-                    <button name="vote" value="like" type="submit" class="btn btn-success">Like</button>
-                    <button name="vote" value="dislike" type="submit" class="btn btn-danger">Dislke</button>
-                </div>
-
+                {% if user.is_authenticated %}
+                    <div class="buttons">
+                        <button name="vote" value="like" type="submit" class="btn btn-success">Like</button>
+                        <button name="vote" value="dislike" type="submit" class="btn btn-danger">Dislke</button>
+                    </div>
+                {% else %}
+                    <div class="buttons-authenticate">
+                        <p>Please note that only authenticated users can vote. </p>
+                        <a href="{% url 'register page' %}" class="btn btn-success">Sign Up</a>
+                        <a href="{% url 'login page' %}" class="btn btn-success">Sign In</a>
+                    </div>
+                {% endif %}
                 <p>Current Rating: {{ item.all_votes }}</p>
                 <a href="{% url 'index page' %}">
                     <button type="button" class="btn btn-light" id="contact-button">Return to main page</button>
                 </a>
-
-            </div>
+            </form>
         </div>
-    </form>
+    </div>
+
 {% endblock %}

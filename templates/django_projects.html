@@ -1,39 +1,34 @@
 {% extends 'head.html' %}
 {% block content %}
-{% load static %}
+    {% load static %}
     <link rel="stylesheet" href="{% static 'css/web_pages.css' %}">
-<div class="page-container">
     <div class="main-container">
         <div class="card">
-            <div class="card-body">
-                <form action="{% url 'index page' %}" method="POST">
-                    {% csrf_token %}
-                    {% if apps %}
-                        <h3>Django Web Apps:</h3>
-                        {% for item in apps %}
-                            <ul style="list-style-type: none">
-                                <li>
-                                    <a href="{% url 'display project' item.pk %}">
-                                        <div class="display-inline">
-                                            <img src=" {% static '/../media/images/service.png' %} ">
-                                            <h2>{{ item.title }}</h2>
-                                        </div>
-                                    </a>
-                                    <input type="hidden" name="item_id" value="{{ all_votes }}">
-                                    <p>Rating: {{ item.all_votes }}</p>
-                                </li>
-                            </ul>
-                        {% endfor %}
-                    {% else %}
-                        <h3>Still nothing here. :(</h3>
-                    {% endif %}
+            <form action="{% url 'index page' %}" method="POST">
+                {% csrf_token %}
+                {% if apps %}
+                    <h3>Django Web Apps:</h3>
+                    {% for item in apps %}
+                        <ul style="list-style-type: none">
+                            <li>
+                                <a href="{% url 'display project' item.pk %}">
+                                    <div class="display-inline">
+                                        <h2>{{ item.title }}</h2>
+                                    </div>
+                                </a>
+                                <input type="hidden" name="item_id" value="{{ all_votes }}">
+                                <p>Rating: {{ item.all_votes }}</p>
+                            </li>
+                        </ul>
+                    {% endfor %}
+                {% else %}
+                    <h3>Still nothing here. :(</h3>
+                {% endif %}
 
-                    <a href="{% url 'index page' %}">
-                        <button type="button" class="btn btn-light" id="contact-button">Return to main page</button>
-                    </a>
-                </form>
-            </div>
+                <a href="{% url 'index page' %}">
+                    <button type="button" class="btn btn-light" id="contact-button">Return to main page</button>
+                </a>
+            </form>
         </div>
     </div>
-</div>
 {% endblock %}

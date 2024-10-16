@@ -27,7 +27,8 @@ class RegisterPage(views.CreateView):
 
     def form_valid(self, form):
         response = super().form_valid(form)
-        return redirect('django page')
+        return redirect('index page')
+
 
 
 def django_page_view(request):
@@ -103,3 +104,7 @@ class AboutPageView(views.DetailView):
 
     def get_object(self):
         return AboutMeModel.objects.first()
+
+
+class UserLogoutForm(auth_views.LogoutView):
+    next_page = reverse_lazy('index page')

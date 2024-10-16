@@ -1,39 +1,33 @@
 {% extends 'head.html' %}
 {% block content %}
-{% load static %}
+    {% load static %}
     <link rel="stylesheet" href="{% static 'css/data_structures_styling.css' %}">
-<div class="page-container">
     <div class="main-container">
         <div class="card">
-            <div class="card-body">
-                <form action="{% url 'index page' %}" method="POST">
-                    {% csrf_token %}
-                    {% if apps %}
-                        <h3>Data Structures and Algorithms:</h3>
-                        {% for item in apps %}
-                            <ul style="list-style-type: none">
-                                <li>
-                                    <a href="{% url 'display project' item.pk %}">
-                                        <div class="display-inline">
-                                            <img src="../media/images/service.png" alt="service">
-                                            <h2>{{ item.title }}</h2>
-                                        </div>
-                                    </a>
-                                    <input type="hidden" name="item_id" value="{{ all_votes }}">
-                                    <p>Rating: {{ item.all_votes }}</p>
-                                </li>
-                            </ul>
-                        {% endfor %}
-                    {% else %}
-                        <h3>Still no Data Structures and Algorithms to show. :(</h3>
-                    {% endif %}
-
-                    <a href="{% url 'index page' %}">
-                        <button type="button" class="btn btn-light" id="contact-button">Return to main page</button>
-                    </a>
-                </form>
-            </div>
+            <form action="{% url 'index page' %}" method="POST">
+                {% csrf_token %}
+                {% if apps %}
+                    <h3>Data Structures and Algorithms:</h3>
+                    {% for item in apps %}
+                        <ul style="list-style-type: none">
+                            <li>
+                                <a href="{% url 'display project' item.pk %}">
+                                    <div class="display-inline">
+                                        <h2>{{ item.title }}</h2>
+                                    </div>
+                                </a>
+                                <input type="hidden" name="item_id" value="{{ all_votes }}">
+                                <p>Rating: {{ item.all_votes }}</p>
+                            </li>
+                        </ul>
+                    {% endfor %}
+                {% else %}
+                    <h3>Still no Data Structures and Algorithms to show. :(</h3>
+                {% endif %}
+                <a href="{% url 'index page' %}">
+                    <button type="button" class="btn btn-light" id="contact-button">Return to main page</button>
+                </a>
+            </form>
         </div>
     </div>
-</div>
 {% endblock %}

@@ -9,10 +9,11 @@ body {
     overflow-y: auto;
 }
 
-div .whole-page {
-
+.nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
-
 .main-container {
     background-image: url('../../media/images/background.jpg');
     background-size: cover;
@@ -25,6 +26,10 @@ div .whole-page {
 
 }
 
+.btn btn-light {
+    box-sizing: border-box;
+    padding: 5px;
+}
 
 .card {
 

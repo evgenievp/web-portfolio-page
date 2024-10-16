@@ -1,3 +1,8 @@
+body {
+    overflow-x: hidden;
+    display: flex;
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -12,6 +17,7 @@
     margin-top:80px;
     padding: 20px;
     border-radius: 8px;
+    border-color: #83d2df;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     height: auto;

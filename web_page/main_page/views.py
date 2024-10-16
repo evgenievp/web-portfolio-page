@@ -17,18 +17,18 @@ class MainPage(views.TemplateView):
 class LoginPage(auth_views.LoginView):
     form_class = LoginForm
     template_name = 'login_page.html'
-    next_page = reverse_lazy('index.html')
+    next_page = reverse_lazy('index page')
 
 
 class RegisterPage(views.CreateView):
     template_name = 'register_page.html'
     model = UserAccount
     form_class = RegisterForm
+    success_url = 'index.html'
 
     def form_valid(self, form):
         response = super().form_valid(form)
         return redirect('index page')
-
 
 
 def django_page_view(request):
@@ -106,5 +106,5 @@ class AboutPageView(views.DetailView):
         return AboutMeModel.objects.first()
 
 
-class UserLogoutForm(auth_views.LogoutView):
+class UserSignOut(auth_views.LogoutView):
     next_page = reverse_lazy('index page')

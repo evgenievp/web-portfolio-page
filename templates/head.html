@@ -31,16 +31,21 @@
                         <a class="nav-link" href="{% url 'contacts page' %}">Contacts</a>
                     </li>
                     {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'register page' %}">Sign Out</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" type="submit" >
+                            <form method="post" action="{% url 'sign out' %}">
+                                {% csrf_token %}
+                                <button type="submit">Sign Out</button>
+                            </form>
+                        </a>
+                        </li>
                     {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'register page' %}">Sign Up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login page' %}">Sign In</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'register page' %}">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login page' %}">Sign In</a>
+                        </li>
                     {% endif %}
                 </ul>
             </div>

@@ -1,5 +1,6 @@
 body {
     overflow-x: hidden;
+    display: flex;
 }
 .main-container {
     background-image: url('../../media/images/background.jpg');
@@ -10,9 +11,11 @@ body {
     height: 60vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
-    
+
     .card {
         margin-top: 200px;
         height: 15%;
@@ -23,10 +26,16 @@ body {
         box-sizing: border-box;
         vertical-align: center;
         border: 2px solid #83d2df;
+        padding: 10px;
     }
 
-img {
-    height: 55%;
+
+
+footer {
+    max-height: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
 }
 
 

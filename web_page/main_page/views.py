@@ -1,4 +1,3 @@
-from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
 from django.views import generic as views
 from django.shortcuts import render, redirect
@@ -7,7 +6,7 @@ from django.contrib.auth import views as auth_views
 
 
 import web_page
-from web_page.main_page.forms import Project, RegisterForm
+from web_page.main_page.forms import Project, RegisterForm, LoginForm
 from web_page.main_page.models import ApplicationModel, AboutMeModel, UserAccount
 
 
@@ -16,7 +15,7 @@ class MainPage(views.TemplateView):
 
 
 class LoginPage(auth_views.LoginView):
-    form_class = LoginView
+    form_class = LoginForm
     template_name = 'login_page.html'
     next_page = reverse_lazy('index.html')
 

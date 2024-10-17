@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'web_page.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 if DEBUG:
-    DATABASE_URL = 'postgresql://petar_web_page:jnQhIv0tLAD2Yp8DlFjBbF2ynF1hJ86h@dpg-cs4gjd0gph6c73c1044g-a.oregon-postgres.render.com/postgres1_0kan'
+    DATABASE_URL = 'postgresql://petar_web_page:JkYrKvUQxbpnJRmcQgwLUFDdKfT5Hcbm@dpg-cs8c91u8ii6s73c84p70-a.oregon-postgres.render.com/postgres1_igqv'
     DATABASES["default"] = dj_database_url.parse(DATABASE_URL)
 else:
     DATABASE_URL = os.environ.get("DATABASE_URL")

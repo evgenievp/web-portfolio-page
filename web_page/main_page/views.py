@@ -1,3 +1,4 @@
+from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic as views
 from django.shortcuts import render, redirect
@@ -6,29 +7,28 @@ from django.contrib.auth import views as auth_views
 
 
 import web_page
-from web_page.main_page.forms import Project, RegisterForm, LoginForm
-from web_page.main_page.models import ApplicationModel, AboutMeModel, UserAccount
+from web_page.main_page.forms import Project #, LoginForm
+from web_page.main_page.models import ApplicationModel, AboutMeModel #, UserAccount
 
 
 class MainPage(views.TemplateView):
     template_name = 'index.html'
 
 
-class LoginPage(auth_views.LoginView):
-    form_class = LoginForm
-    template_name = 'login_page.html'
-    next_page = reverse_lazy('index page')
+# class LoginPage(auth_views.LoginView):
+#     form_class = LoginForm
+#     template_name = 'login_page.html'
+#     success_url = reverse_lazy('index page')
 
 
-class RegisterPage(views.CreateView):
-    template_name = 'register_page.html'
-    model = UserAccount
-    form_class = RegisterForm
-    success_url = 'index.html'
-
-    def form_valid(self, form):
-        response = super().form_valid(form)
-        return redirect('index page')
+# class RegisterPage(views.CreateView):
+#     template_name = 'register_page.html'
+#     form_class = UserCreationForm
+#     success_url = 'index.html'
+#
+#     def form_valid(self, form):
+#         response = super().form_valid(form)
+#         return redirect('index page')
 
 
 def django_page_view(request):
@@ -45,19 +45,24 @@ def django_page_view(request):
 def display_project(request, pk):
 
     item = ApplicationModel.objects.get(pk=pk)
+    user = request.user
     context = {
         'item': item,
+        'user': request.user,
     }
-
-    if request.POST.get('vote') == 'like':
-        item.all_votes = F('all_votes') + 1
-        item.save()
-        item.refresh_from_db()
-        return redirect('index page')
-    elif request.POST.get('vote') == 'dislike':
-        item.all_votes = F('all_votes') - 1
-        item.save()
-        item.refresh_from_db()
+    if user.is_authenticated and request.method == "POST":
+        if not user.voted:
+            if request.POST.get('vote') == 'like':
+                item.all_votes = F('all_votes') + 1
+                item.save()
+                item.refresh_from_db()
+                return redirect('index page')
+            elif request.POST.get('vote') == 'dislike':
+                item.all_votes = F('all_votes') - 1
+                item.save()
+                item.refresh_from_db()
+            user.voted = True
+            user.save()
         return redirect('index page')
 
     return render(request, 'display_project_page.html', context=context)
@@ -106,5 +111,5 @@ class AboutPageView(views.DetailView):
         return AboutMeModel.objects.first()
 
 
-class UserSignOut(auth_views.LogoutView):
-    next_page = reverse_lazy('index page')
+# class UserSignOut(auth_views.LogoutView):
+#     next_page = reverse_lazy('index page')

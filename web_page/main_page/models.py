@@ -39,24 +39,28 @@ class ApplicationModel(models.Model):
         return self.title
 
 
-class UserAccount(models.Model):
-    username = models.CharField(max_length=50,
-                                null=False,
-                                unique=True,
-                                validators=[min_length_validator,]
-                                )
-    password = models.CharField(max_length=50,
-                                null=False,
-                                )
-
-    email = models.EmailField(max_length=60,
-                              unique=True,
-                              null=False,
-                              validators=[min_length_validator,],
-                              )
-
-    def __str__(self):
-        return self.username
+# class UserAccount(models.Model):
+#     username = models.CharField(max_length=50,
+#                                 null=False,
+#                                 unique=True,
+#                                 validators=[min_length_validator,]
+#                                 )
+#     password = models.CharField(max_length=50,
+#                                 null=False,
+#                                 )
+#
+#     email = models.EmailField(max_length=60,
+#                               unique=True,
+#                               null=False,
+#                               validators=[min_length_validator,],
+#                               )
+#
+#     voted = models.BooleanField(default=False, db_default=False)
+#     USERNAME_FIELD = 'username'
+#     REQUIRED_FIELDS = ['email', 'username', 'password']
+#
+#     def __str__(self):
+#         return self.username
 
 
 class AboutMeModel(models.Model):

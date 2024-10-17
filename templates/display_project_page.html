@@ -12,15 +12,20 @@
                 <a href="{{ item.url_link }}">Go to GitHub of repo</a>
                 <br>
                 {% if user.is_authenticated %}
-                    <div class="buttons">
-                        <button name="vote" value="like" type="submit" class="btn btn-success">Like</button>
-                        <button name="vote" value="dislike" type="submit" class="btn btn-danger">Dislke</button>
-                    </div>
+                    {% if not user.voted %}
+                        <div class="buttons">
+                            <button name="vote" value="like" type="submit" class="btn btn-success">Like</button>
+                            <button name="vote" value="dislike" type="submit" class="btn btn-danger">Dislke</button>
+                        </div>
+                    {% else %}
+                        <p>You already voted. Thank you.</p>
+                    {% endif %}
+a
                 {% else %}
                     <div class="buttons-authenticate">
                         <p>Please note that only authenticated users can vote. </p>
-                        <a href="{% url 'register page' %}" class="btn btn-success">Sign Up</a>
-                        <a href="{% url 'login page' %}" class="btn btn-success">Sign In</a>
+{#                        <a href="{% url 'register page' %}" class="btn btn-success">Sign Up</a>#}
+{#                        <a href="{% url 'login page' %}" class="btn btn-success">Sign In</a>#}
                     </div>
                 {% endif %}
                 <p>Current Rating: {{ item.all_votes }}</p>

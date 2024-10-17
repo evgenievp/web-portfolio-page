@@ -43,7 +43,7 @@ button {
 p {
     color: #e4c78f;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-    font-size: 16px;
+    font-size: 18px;
     padding: 10px;
     display: block;
     overflow-y: auto;
@@ -57,7 +57,7 @@ p {
 .card {
     display: flex;
     justify-content: center;
-    background-image: url('../../media/images/background.jpg');
+    background-image: url('../../media/images/dark.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;

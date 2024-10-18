@@ -39,27 +39,28 @@
                         <button class="btn btn-light">Contacts</button>
                     </a>
                 </li>
-                {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" type="submit">
-                            <form method="post" action="{% url 'sign out' %}">
-                                {% csrf_token %}
-                                <button class="btn btn-light" type="submit">Sign Out</button>
-                            </form>
-                        </a>
-                    </li>
-                {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'register page' %}">
-                            <button class="btn btn-light">Sign Up</button>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login page' %}">
-                            <button class="btn btn-light">Sign In</button>
-                        </a>
-                    </li>
-                {% endif %}
+{##}
+{#                {% if user.is_authenticated %}#}
+{#                    <li class="nav-item">#}
+{#                        <a class="nav-link" type="submit">#}
+{#                            <form method="post" action="{% url 'sign out' %}">#}
+{#                                {% csrf_token %}#}
+{#                                <button class="btn btn-light" type="submit">Sign Out</button>#}
+{#                            </form>#}
+{#                        </a>#}
+{#                    </li>#}
+{#                {% else %}#}
+{#                    <li class="nav-item">#}
+{#                        <a class="nav-link" href="{% url 'register page' %}">#}
+{#                            <button class="btn btn-light">Sign Up</button>#}
+{#                        </a>#}
+{#                    </li>#}
+{#                    <li class="nav-item">#}
+{#                        <a class="nav-link" href="{% url 'login page' %}">#}
+{#                            <button class="btn btn-light">Sign In</button>#}
+{#                        </a>#}
+{#                    </li>#}
+{#                {% endif %}#}
             </ul>
         </div>
     </div>

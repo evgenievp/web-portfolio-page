@@ -24,8 +24,8 @@ a
                 {% else %}
                     <div class="buttons-authenticate">
                         <p>Please note that only authenticated users can vote. </p>
-{#                        <a href="{% url 'register page' %}" class="btn btn-success">Sign Up</a>#}
-{#                        <a href="{% url 'login page' %}" class="btn btn-success">Sign In</a>#}
+                        <a href="{% url 'register page' %}" class="btn btn-success">Sign Up</a>
+                        <a href="{% url 'login page' %}" class="btn btn-success">Sign In</a>
                     </div>
                 {% endif %}
                 <p>Current Rating: {{ item.all_votes }}</p>

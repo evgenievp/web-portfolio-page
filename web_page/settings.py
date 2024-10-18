@@ -3,6 +3,7 @@ from pathlib import Path
 import dj_database_url
 import mimetypes
 from django.conf.global_settings import DATABASES
+from django.urls import reverse_lazy
 from dotenv import load_dotenv
 mimetypes.add_type("text/css", ".css", True)
 load_dotenv()
@@ -18,6 +19,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
+
 DEBUG = os.environ.get("DEBUG", "False").split(",")
 if DEBUG:
     SECRET_KEY = 'test'
@@ -74,9 +77,19 @@ WSGI_APPLICATION = 'web_page.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "postgres1",
+#         "USER": "petar_web_page",
+#         "PASSWORD": "qwe123",
+#         "HOST": "127.0.0.1",
+#         "PORT": "5432",
+#     }
+# }
+SECRET_KEY = 'test'
 if DEBUG:
-    DATABASE_URL = 'postgresql://petar_web_page:JkYrKvUQxbpnJRmcQgwLUFDdKfT5Hcbm@dpg-cs8c91u8ii6s73c84p70-a.oregon-postgres.render.com/postgres1_igqv'
+    DATABASE_URL = 'postgresql://petar_web_page:slinTzrQ44MFJr7BEoi5R6MUodhzDI9c@dpg-cs90iajqf0us738h3dv0-a.oregon-postgres.render.com/postgres1_qv9t'
     DATABASES["default"] = dj_database_url.parse(DATABASE_URL)
 else:
     DATABASE_URL = os.environ.get("DATABASE_URL")

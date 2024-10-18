@@ -1,5 +1,7 @@
+from django.contrib.auth.models import AbstractUser, Group
 from django.db import models
 from django.core.exceptions import ValidationError
+from django.db.models import CASCADE
 
 
 def min_length_validator(value, min_length=5):
@@ -39,13 +41,14 @@ class ApplicationModel(models.Model):
         return self.title
 
 
-# class UserAccount(models.Model):
+#
+# class UserAccount(AbstractUser):
 #     username = models.CharField(max_length=50,
 #                                 null=False,
 #                                 unique=True,
 #                                 validators=[min_length_validator,]
 #                                 )
-#     password = models.CharField(max_length=50,
+#     password = models.CharField(max_length=150,
 #                                 null=False,
 #                                 )
 #
@@ -54,13 +57,21 @@ class ApplicationModel(models.Model):
 #                               null=False,
 #                               validators=[min_length_validator,],
 #                               )
-#
-#     voted = models.BooleanField(default=False, db_default=False)
+#     voted = models.BooleanField(default=False)
 #     USERNAME_FIELD = 'username'
-#     REQUIRED_FIELDS = ['email', 'username', 'password']
+#     REQUIRED_FIELDS = ['email', 'password']
 #
 #     def __str__(self):
 #         return self.username
+#
+
+
+class User(models.Model):
+    username = models.CharField(max_length=40, null=False)
+    password = models.CharField(max_length=150, null=False)
+
+    USERNAME_FIELD = 'username'
+    REQUIRED_FIELDS = ['email', 'password']
 
 
 class AboutMeModel(models.Model):

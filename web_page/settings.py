@@ -86,8 +86,7 @@ WSGI_APPLICATION = 'web_page.wsgi.application'
 #         "HOST": "127.0.0.1",
 #         "PORT": "5432",
 #     }
-# }
-SECRET_KEY = 'test'
+#}
 if DEBUG:
     DATABASE_URL = 'postgresql://petar_web_page:slinTzrQ44MFJr7BEoi5R6MUodhzDI9c@dpg-cs90iajqf0us738h3dv0-a.oregon-postgres.render.com/postgres1_qv9t'
     DATABASES["default"] = dj_database_url.parse(DATABASE_URL)

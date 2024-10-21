@@ -33,8 +33,10 @@ class LoginForm(auth_forms.AuthenticationForm):
         }
 
 
-class UserCreate(auth_forms.UserCreationForm):
+class RegisterForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['username', 'password']
-
+        fields = ['username', 'password', 'email']
+        widgets = {
+            'password': forms.PasswordInput(),
+        }

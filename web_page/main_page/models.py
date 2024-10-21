@@ -41,35 +41,11 @@ class ApplicationModel(models.Model):
         return self.title
 
 
-#
-# class UserAccount(AbstractUser):
-#     username = models.CharField(max_length=50,
-#                                 null=False,
-#                                 unique=True,
-#                                 validators=[min_length_validator,]
-#                                 )
-#     password = models.CharField(max_length=150,
-#                                 null=False,
-#                                 )
-#
-#     email = models.EmailField(max_length=60,
-#                               unique=True,
-#                               null=False,
-#                               validators=[min_length_validator,],
-#                               )
-#     voted = models.BooleanField(default=False)
-#     USERNAME_FIELD = 'username'
-#     REQUIRED_FIELDS = ['email', 'password']
-#
-#     def __str__(self):
-#         return self.username
-#
-
-
-class User(models.Model):
-    username = models.CharField(max_length=40, null=False)
+class User(AbstractUser):
+    username = models.CharField(max_length=40, null=False, unique=True)
     password = models.CharField(max_length=150, null=False)
-
+    email = models.EmailField(max_length=100, null=False, unique=True)
+    voted = models.BooleanField(default=False)
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email', 'password']
 

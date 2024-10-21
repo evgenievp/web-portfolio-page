@@ -5,42 +5,35 @@ from django.db.models import F
 from django.contrib.auth import views as auth_views
 
 import web_page
-from web_page.main_page.forms import Project
+from web_page.main_page.forms import Project, LoginForm, RegisterForm
 from web_page.main_page.models import ApplicationModel, AboutMeModel
 
 
 class MainPage(views.TemplateView):
     template_name = 'index.html'
 
-#
-# class LoginPage(auth_views.LoginView):
-#     form_class = LoginForm
-#     template_name = 'login_page.html'
-#     next_page = reverse_lazy('index page')
 
-#
-# def login_page(request):
-#     if request.method == "POST":
-#         form = AuthenticationForm(data=request.POST)
-#         if form.is_valid():
-#             login(request, form.get_user())
-#             return redirect('login page')
-#     else:
-#         form = AuthenticationForm()
-#     context = {
-#         'form': form,
-#     }
-#     return render(request, "login_page.html", context=context)
+class LoginPage(auth_views.LoginView):
+    form_class = LoginForm
+    template_name = 'login_page.html'
+    next_page = reverse_lazy('index page')
 
-# class RegisterPage(views.CreateView):
-#     template_name = 'register_page.html'
-#     form_class = UserCreate
-#     success_url = reverse_lazy('index page')
-#
-#
-#     def form_valid(self, form):
-#         response = super().form_valid(form)
-#         return redirect('index page')
+
+def register_page(request):
+    if request.method == "POST":
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.set_password(form.cleaned_data['password'])
+            user.save()
+            return redirect('index page')
+    else:
+        form = RegisterForm()
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'register_page.html', context=context)
 
 
 def django_page_view(request):
@@ -60,7 +53,7 @@ def display_project(request, pk):
     user = request.user
     context = {
         'item': item,
-        'user': request.user,
+        'user': user,
     }
     if user.is_authenticated and request.method == "POST":
         if not user.voted:
@@ -68,13 +61,15 @@ def display_project(request, pk):
                 item.all_votes = F('all_votes') + 1
                 item.save()
                 item.refresh_from_db()
+                user.voted = True
+                user.save()
                 return redirect('index page')
             elif request.POST.get('vote') == 'dislike':
                 item.all_votes = F('all_votes') - 1
                 item.save()
                 item.refresh_from_db()
-            user.voted = True
-            user.save()
+                user.voted = True
+                user.save()
         return redirect('index page')
 
     return render(request, 'display_project_page.html', context=context)

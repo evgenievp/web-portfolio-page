@@ -2,9 +2,10 @@ from django.urls import path
 from web_page.main_page import views
 from django.conf.urls.static import static
 from django.conf import settings
+from django.views.static import serve
+from django.urls import re_path
 
 handler404 = 'django.views.defaults page_not_found'
-
 
 urlpatterns = [
     path('', views.MainPage.as_view(), name='index page'),
@@ -15,10 +16,11 @@ urlpatterns = [
     path('contacts/', views.ContactsPageView.as_view(), name='contacts page'),
     path('about/', views.AboutPageView.as_view(), name='about page'),
     path('display-project/<int:pk>/', views.display_project, name='display project'),
-    # path('login/', views.login_page, name='login page'),
-    # path('register/', views.RegisterPage.as_view(), name='register page'),
-    # path('signout/', views.UserSignOut.as_view(), name='sign out'),
+    path('login/', views.LoginPage.as_view(), name='login page'),
+    path('register/', views.register_page, name='register page'),
+    path('signout/', views.UserSignOut.as_view(), name='sign out'),
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+    re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-

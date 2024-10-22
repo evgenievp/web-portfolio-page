@@ -1,5 +1,5 @@
 from django.contrib import admin
-from web_page.main_page.models import ApplicationModel, AboutMeModel#, UserAccount
+from web_page.main_page.models import ApplicationModel, AboutMeModel, User
 
 
 @admin.register(ApplicationModel)
@@ -11,7 +11,7 @@ class Applications(admin.ModelAdmin):
 class AboutMe(admin.ModelAdmin):
     pass
 
-#
-# @admin.register(UserAccount)
-# class UserAccount(admin.ModelAdmin):
-#    pass
+
+@admin.register(User)
+class UserAccount(admin.ModelAdmin):
+   pass

@@ -51,7 +51,7 @@ class MessageForm(forms.ModelForm):
                 'placeholder': 'If you wish - attack title here.'
             }),
             'message': forms.Textarea(attrs={
-                'placeholder': 'Only I will be able to see the messages submitted here.',
+                'placeholder': 'Only I will be able to see the messages submitted here.'
             }),
         }
 

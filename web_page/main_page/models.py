@@ -50,5 +50,13 @@ class User(AbstractUser):
     REQUIRED_FIELDS = ['email', 'password']
 
 
+class Message(models.Model):
+    title = models.CharField(max_length=100, null=True, unique=False)
+    text = models.TextField(max_length=800, null=False,)
+
+
+
+
+
 class AboutMeModel(models.Model):
     info = models.TextField(null=False)

@@ -1,0 +1,44 @@
+body {
+    overflow-y: auto;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.contact-form {
+    border: 2px solid #83d2df;
+    background-image: url("../../media/images/background-form.jpg");
+    margin-top: 150px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+    flex-direction: column;
+}
+p {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#id_text {
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    resize: none;
+    height: 200px;
+}
+input {
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 50%;
+}

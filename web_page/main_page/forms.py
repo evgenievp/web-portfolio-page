@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from web_page.main_page.models import ApplicationModel, User
+from web_page.main_page.models import ApplicationModel, User, Message
 from django.contrib.auth import forms as auth_forms
 from django import forms
 
@@ -40,3 +40,22 @@ class RegisterForm(forms.ModelForm):
         widgets = {
             'password': forms.PasswordInput(),
         }
+
+
+class MessageForm(forms.ModelForm):
+    class Meta:
+        model = Message
+        fields = '__all__'
+        widgets = {
+            'title': forms.TextInput(attrs={
+                'placeholder': 'If you wish - attack title here.'
+            }),
+            'message': forms.Textarea(attrs={
+                'placeholder': 'Only I will be able to see the messages submitted here.',
+            }),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(MessageForm, self).__init__(*args, **kwargs)
+        for field_name in self.fields:
+            self.fields[field_name].label = ''

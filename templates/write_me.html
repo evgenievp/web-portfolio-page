@@ -1,0 +1,14 @@
+{% extends 'head.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/write_me_styles.css' %}">
+
+    <div class="main-container">
+        <form action="{% url 'write me' %}" method="post" class="contact-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+             <button class="btn btn-success" type="submit">Send</button>
+        </form>
+    </div>
+
+{% endblock %}

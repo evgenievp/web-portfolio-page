@@ -19,6 +19,7 @@ urlpatterns = [
     path('login/', views.LoginPage.as_view(), name='login page'),
     path('register/', views.register_page, name='register page'),
     path('signout/', views.UserSignOut.as_view(), name='sign out'),
+    path('write_me/', views.WriteMeView.as_view(), name='write me'),
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
 ]

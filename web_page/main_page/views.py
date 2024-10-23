@@ -3,9 +3,8 @@ from django.views import generic as views
 from django.shortcuts import render, redirect
 from django.db.models import F
 from django.contrib.auth import views as auth_views
-
-import web_page
-from web_page.main_page.forms import Project, LoginForm, RegisterForm
+from django.views.generic.edit import FormView
+from web_page.main_page.forms import Project, LoginForm, RegisterForm, MessageForm
 from web_page.main_page.models import ApplicationModel, AboutMeModel
 
 
@@ -120,3 +119,22 @@ class AboutPageView(views.DetailView):
 
 class UserSignOut(auth_views.LogoutView):
     next_page = reverse_lazy('index page')
+
+
+class WriteMeView(FormView):
+    template_name = 'write_me.html'
+    form_class = MessageForm
+
+    def form_valid(self, form):
+        if form.is_valid():
+            form.save()
+        return super().form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        form_class = MessageForm
+
+        context = super().get_context_data(**kwargs)
+        context['form'] = form_class
+        return context
+
+    success_url = reverse_lazy('index page')

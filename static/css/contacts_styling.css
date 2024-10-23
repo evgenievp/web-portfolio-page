@@ -18,18 +18,25 @@ body {
 
     .card {
         margin-top: 200px;
-        height: 15%;
+        height: 35%;
         width: 33%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
         vertical-align: center;
         border: 2px solid #83d2df;
         padding: 10px;
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
 
-
+a {
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+}
 
 footer {
     max-height: 100px;

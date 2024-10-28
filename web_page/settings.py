@@ -68,7 +68,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'web_page.wsgi.application'
-SECRET_KEY = 'test'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 if DEBUG:
     DATABASE_URL = 'postgresql://petar_web_page:JptTbEdchKBJM6jBdf2TJegucTESVHeE@dpg-csb6oartq21c73998ja0-a.oregon-postgres.render.com/postgres1_bb6b'

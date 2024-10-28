@@ -3,7 +3,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/projects_styling.css' %}">
     <div class="main-container">
-        <div class="card">
+        <div class="card-display">
             <form action="{% url 'display project' item.id %}" method="POST">
                 {% csrf_token %}
                 <h2>Title: {{ item.title }}</h2>

@@ -17,20 +17,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", "False").split(",")
 
+
+DEBUG = os.environ.get("DEBUG", "False").split(",")
 
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / "mydatabase",
-#     }
-# }
 # Application definition
 
 INSTALLED_APPS = [
@@ -74,6 +68,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'web_page.wsgi.application'
+SECRET_KEY = 'test'
 
 if DEBUG:
     DATABASE_URL = 'postgresql://petar_web_page:JptTbEdchKBJM6jBdf2TJegucTESVHeE@dpg-csb6oartq21c73998ja0-a.oregon-postgres.render.com/postgres1_bb6b'
@@ -100,6 +95,12 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / "mydatabase",
+#     }
+# }
 
 PASSWORD_HASHERS = [
     "django.contrib.auth.hashers.PBKDF2PasswordHasher",
@@ -126,7 +127,7 @@ STATICFILES_DIRS = [
 ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-#STATIC_ROOT = 'static/'
+# STATIC_ROOT = 'static/'
 AUTH_USER_MODEL = 'main_page.User'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

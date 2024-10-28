@@ -16,7 +16,8 @@ body {
     align-items: center;
 }
 
-    .card {
+    .card-contacts {
+        background-image: url("../../media/images/background-form.jpg");
         margin-top: 200px;
         height: 35%;
         width: 33%;

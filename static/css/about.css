@@ -54,8 +54,9 @@ p {
 }
 
 
-.card {
+.card-about {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     background-image: url('../../media/images/dark.jpg');
     background-repeat: no-repeat;
@@ -69,7 +70,6 @@ p {
     padding: 20px;
     border-radius: 5px;
     border: 2px solid #83d2df;
-
 
 }
 

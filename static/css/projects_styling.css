@@ -50,8 +50,9 @@ img {
     margin: 10px;
 }
 
-.card {
+.card-display {
     display: flex;
+    background-image: url("../../media/images/background-form.jpg");
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
@@ -59,7 +60,8 @@ img {
     overflow-x: hidden;
     margin-top: 60px;
     margin-bottom: 10px;
-    height: 30%;
+    height: auto;
+    width: 60%;
     padding: 20px;
     border-radius: 5px;
     border: 2px solid #83d2df;

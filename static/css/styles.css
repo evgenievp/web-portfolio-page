@@ -31,7 +31,6 @@ body {
 }
 
 .card {
-
     margin: 20px;
     height: 55%;
     width: 33%;
@@ -77,5 +76,9 @@ div .button {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+div .card {
+    width: 18rem;
 }
 

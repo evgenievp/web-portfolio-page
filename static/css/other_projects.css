@@ -62,8 +62,9 @@ img {
     max-height: 100px;
 }
 
-.card {
+.card-other {
     display: flex;
+    background-color: black;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
@@ -82,6 +83,7 @@ form {
     padding:4px;
     display: flex;
     border-radius: 5px;
+    height: 100%;
     box-sizing: border-box;
     overflow-y:auto;
     flex-direction:column;

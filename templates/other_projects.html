@@ -3,7 +3,7 @@
 {% block content %}
     <link rel="stylesheet" href="{% static 'css/other_projects.css' %}">
     <div class="main-container">
-        <div class="card">
+        <div class="card-other">
             <form action="{% url 'index page' %}" method="POST">
                 {% csrf_token %}
                 {% if apps %}

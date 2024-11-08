@@ -48,7 +48,7 @@ class MessageForm(forms.ModelForm):
         fields = '__all__'
         widgets = {
             'title': forms.TextInput(attrs={
-                'placeholder': 'If you wish - attack title here.'
+                'placeholder': 'If you wish - attach title here.'
             }),
             'message': forms.Textarea(attrs={
                 'placeholder': 'Only I will be able to see the messages submitted here.'

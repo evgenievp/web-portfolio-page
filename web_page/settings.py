@@ -13,6 +13,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = os.environ.get("DEBUG", "False").split(",")
 
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
+if DEBUG:
+    SECRET_KEY = 'test'
+else:
+    SECRET_KEY = os.environ.get("SECRET_KEY")
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -56,12 +60,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'web_page.wsgi.application'
 if DEBUG:
-    DATABASE_URL = 'postgresql://petar_web_page:JptTbEdchKBJM6jBdf2TJegucTESVHeE@dpg-csb6oartq21c73998ja0-a.oregon-postgres.render.com/postgres1_bb6b'
+    DATABASE_URL = 'postgresql://petar_web_page:bWOkGDDyM3Q82TDn8exmSGQpbdptlxfJ@dpg-csupirqj1k6c738i3jm0-a.oregon-postgres.render.com/postgres1_h66g'
     DATABASES["default"] = dj_database_url.parse(DATABASE_URL)
-    SECRET_KEY = os.environ.get('SECRET_KEY')
 else:
     DATABASE_URL = os.environ.get("DATABASE_URL")
-    SECRET_KEY = os.environ.get('SECRET_KEY')
     DATABASES['default'] = os.environ.get("DATABASE_URL")
 
 

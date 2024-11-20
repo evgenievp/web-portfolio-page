@@ -3,7 +3,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/web_pages.css' %}">
     <div class="main-container">
-        <div class="card-flask">
+        <div class="card-django">
             <form action="{% url 'index page' %}" method="POST">
                 {% csrf_token %}
                 {% if apps %}

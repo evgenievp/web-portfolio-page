@@ -62,7 +62,7 @@ img {
     max-height: 100px;
 }
 
-.card-flask {
+.card-django {
     display: flex;
     background-color: black;
     justify-content: center;

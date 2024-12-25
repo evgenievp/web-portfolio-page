@@ -81,11 +81,21 @@ DATABASES = {
         'NAME': os.environ.get('DB_NAME'),
         'USER': os.environ.get('DB_USER'),
         'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
-        'PORT': os.environ.get('DB_PORT', '5432'),
+        'HOST': 'database-1.cnois0is83vw.eu-central-1.rds.amazonaws.com',
+        'PORT': os.environ.get('DB_PORT', 5432),
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'web_portfolio',
+#         'USER': 'evgenievp',
+#         'PASSWORD': 'Boisdechapp7.',
+#         'HOST': 'database-1.cnois0is83vw.eu-central-1.rds.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
 
 PASSWORD_HASHERS = [
     "django.contrib.auth.hashers.PBKDF2PasswordHasher",

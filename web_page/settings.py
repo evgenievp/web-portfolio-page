@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-import dj_database_url
 import mimetypes
 from django.conf.global_settings import DATABASES
 from django.urls import reverse_lazy

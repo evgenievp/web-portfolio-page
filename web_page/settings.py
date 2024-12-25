@@ -3,8 +3,10 @@ from pathlib import Path
 import mimetypes
 from django.conf.global_settings import DATABASES
 from django.urls import reverse_lazy
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 mimetypes.add_type("text/css", ".css", True)
+#load_dotenv()
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 

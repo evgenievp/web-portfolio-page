@@ -59,13 +59,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'web_page.wsgi.application'
-if DEBUG:
-    DATABASE_URL = 'postgresql://petar_web_page:bWOkGDDyM3Q82TDn8exmSGQpbdptlxfJ@dpg-csupirqj1k6c738i3jm0-a.oregon-postgres.render.com/postgres1_h66g'
-    DATABASES["default"] = dj_database_url.parse(DATABASE_URL)
-else:
-    DATABASE_URL = os.environ.get("DATABASE_URL")
-    DATABASES['default'] = os.environ.get("DATABASE_URL")
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -81,12 +74,17 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / "mydatabase",
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'web-portfolio',
+        'USER': 'evgenievp',
+        'PASSWORD': 'Boisdechapp7.',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
 
 PASSWORD_HASHERS = [
     "django.contrib.auth.hashers.PBKDF2PasswordHasher",

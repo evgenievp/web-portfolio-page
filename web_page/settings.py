@@ -77,11 +77,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.environ.get('DB_NAME'),
         'USER': os.environ.get('DB_USER'),
         'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': 'database-1.cnois0is83vw.eu-central-1.rds.amazonaws.com',
+        'HOST': os.environ.get("DB_HOST"),
         'PORT': os.environ.get('DB_PORT', 5432),
     }
 }
@@ -92,7 +92,7 @@ DATABASES = {
 #         'NAME': 'web_portfolio',
 #         'USER': 'evgenievp',
 #         'PASSWORD': 'Boisdechapp7.',
-#         'HOST': 'database-1.cnois0is83vw.eu-central-1.rds.amazonaws.com',
+#         'HOST': 'web-portfolio.cnois0is83vw.eu-central-1.rds.amazonaws.com',
 #         'PORT': '5432',
 #     }
 # }
